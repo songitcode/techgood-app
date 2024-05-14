@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Products;
 
 class CustomAuthController extends Controller
 {
@@ -10,26 +12,6 @@ class CustomAuthController extends Controller
     public function loginPage()
     {
         return view("auth.login");
-    }
-    // index page
-    public function dashboardAdminPage()
-    {
-        return view("admin.dashboard");
-    }
-    // admin-dashboard page
-    public function addProductAdminPage()
-    {
-        return view("admin.add_product");
-    }
-    // admin-products page
-    public function listProductsAdminPage()
-    {
-        return view("admin.list_product");
-    }
-    // admin-users page
-    public function listUsersAdminPage()
-    {
-        return view("admin.list_users");
     }
     // register page
     public function registerPage()
@@ -40,13 +22,9 @@ class CustomAuthController extends Controller
     // list products page
     public function productsPage()
     {
-        return view("auth.product_list");
-    }
-
-    // detail product page
-    public function productDetailPage()
-    {
-        return view("auth.product_detail");
+        // return view("auth.product_list");
+        $products = Products::all();
+        return view('auth.product_list', ['products' => $products]);
     }
 
     // cart product page

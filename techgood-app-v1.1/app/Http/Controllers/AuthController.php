@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Session;
@@ -75,7 +76,15 @@ class AuthController extends Controller
     {
         if (Auth::check()) {
             $users = User::all();
-            return view('dashboard', ['messi' => $users]);
+            return view('dashboard', ['users' => $users]);
         }
+    }
+
+    public function productDetail(Request $request)
+    {
+        $product_id = $request->get('product_id');
+        $products = Products::find($product_id);
+
+        return view('auth.product_detail', ['products' => $products]);
     }
 }

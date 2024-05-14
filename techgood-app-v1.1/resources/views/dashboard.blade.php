@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('./front-end/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('./font-awesome/fontawesome-free-6.5.2-web/css/all.min.css') }}">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
 </head>
 <style>
 

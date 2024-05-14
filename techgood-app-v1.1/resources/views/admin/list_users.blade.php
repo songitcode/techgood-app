@@ -2,7 +2,7 @@
 
 @section('admin-users')
     <div class="container mt-5">
-        <a href="#" class="btn btn-success float-right">Thêm user</a>
+        <a href="{{ route('admin.add_user') }}" class="btn btn-success float-right">Thêm user</a>
         <h2 class="mb-4">User List</h2>
         <table class="table">
             <thead>
@@ -17,20 +17,30 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>username</td>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                    <td>email@example.com</td>
-                    <td>1990-01-01</td>
-                    <td><img src="https://via.placeholder.com/150" alt="User Photo" style="max-width: 100px;"></td>
-                    <td>
-                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <!-- You can repeat this row structure for each user -->
+                @foreach ($users as $item)
+                    <tr>
+                        <td>{{ $item->username }}</td>
+                        <td>{{ $item->first_name }}</td>
+                        <td>{{ $item->last_name }}</td>
+                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->birthday }}</td>
+                        <td><img src="{{ $item->photo }}" alt="User Photo" style="max-width: 100px;"></td>
+                        <td>
+                            <a href="{{ route('edit_user', ['user_id' => $item->user_id]) }}"
+                                class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{ route('delete_user', ['user_id' => $item->user_id]) }}"
+                                class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
+    <script>
+        window.onload = function() {
+            @if (Session::has('success'))
+                alert("{{ Session::get('success') }}");
+            @endif
+        };
+    </script>
 @endsection

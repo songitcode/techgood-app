@@ -401,6 +401,19 @@ li.item-content p.items {
     margin-top: var(--bs-gutter-y);
 }
 
+.star {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: gray;
+}
+
+.fa-star.checked {
+    color: gold;
+}
+
 @media (min-width: 768px) {
     .col-md {
         flex: 1 0 0%;

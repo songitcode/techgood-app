@@ -16,9 +16,9 @@ return new class extends Migration {
             $table->string('p_name');
             $table->string('p_price_old');
             $table->string('p_price_new');
-            $table->string('p_description');
+            $table->string('p_description', 255);
             $table->string('p_color');
-            $table->string('p_type');
+            $table->string('p_type'); // kiểu danh mục
             $table->string('p_quantity');
             $table->string('p_photo1');
             $table->string('p_photo2');
