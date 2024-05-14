@@ -1,0 +1,16 @@
+tech-good code CMD
+
+Tạo database tech_good_db
+
+php artisan migrate
+
+php artisan migrate:rollback // Sử dụng xóa tất cả dữ liệu
+
+-- Category
+php artisan db:seed --class=Category
+
+-- Products
+php artisan db:seed --class=Products
+
+-- InfoUser
+php artisan db:seed --class=InfoUser

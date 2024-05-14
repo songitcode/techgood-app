@@ -12,7 +12,7 @@
                 <div class="input-data">
                     <div class="div-firt box-class">
                         <label for="first_name">Tên đăng nhập</label>
-                        <input placeholder="Username    " class="input-class" type="text" id="username" name="username"
+                        <input placeholder="Username" class="input-class" type="text" id="username" name="username"
                             required>
                     </div>
                     <div class="div-firt box-class">
