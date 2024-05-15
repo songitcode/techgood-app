@@ -1,16 +1,19 @@
-tech-good code CMD
+Các bạn code nhớ tạo branch như sau: tencacban_chucnang
 
 Tạo database tech_good_db
+php artisan migrate:rollback // Sử dụng xóa tất cả dữ liệu (Không chạy lệnh này)
 
+Lệnh 1 khi clone code về
+composer update // Update lại composer để có file vendor
+
+--2 Tạo database
 php artisan migrate
 
-php artisan migrate:rollback // Sử dụng xóa tất cả dữ liệu
-
--- Category
+--3 Dữ liệu seeder Category
 php artisan db:seed --class=Category
 
--- Products
+--4 Dữ liệu seeder Products
 php artisan db:seed --class=Products
 
--- InfoUser
+--5 Dữ liệu seeder InfoUser
 php artisan db:seed --class=InfoUser
