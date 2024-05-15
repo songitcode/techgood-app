@@ -1,5 +1,5 @@
 @extends('admin.dashboard')
-
+<title>Admin - Danh Sách Users</title>
 @section('admin-users')
     <div class="container mt-5">
         <a href="{{ route('admin.add_user') }}" class="btn btn-success float-right">Thêm user</a>
@@ -23,8 +23,9 @@
                         <td>{{ $item->first_name }}</td>
                         <td>{{ $item->last_name }}</td>
                         <td>{{ $item->email }}</td>
-                        <td>{{ $item->birthday }}</td>
-                        <td><img src="{{ $item->photo }}" alt="User Photo" style="max-width: 100px;"></td>
+                        <td>{{ \Carbon\Carbon::parse($item->birthday)->format('d/m/Y') }}</td>
+                        <td><img src="{{ $item->photo }}" alt="User Photo" style="max-width: 100px;max-height: auto;">
+                        </td>
                         <td>
                             <a href="{{ route('edit_user', ['user_id' => $item->user_id]) }}"
                                 class="btn btn-primary btn-sm">Edit</a>

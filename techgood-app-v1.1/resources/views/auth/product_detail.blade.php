@@ -64,6 +64,7 @@
                         <div class="numbers">1</div>
                         <div class="plus">+</div>
                     </div>
+                    <p>còn lại <span class="soluongconlai" style="color: #000;">{{ $products->p_quantity }}</span></p>
                 </div>
                 <div class="addtocard">
                     <button type="submit" class="d-btn-addtocart">Thêm vào giỏ</button>

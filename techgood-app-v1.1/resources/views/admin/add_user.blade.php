@@ -1,5 +1,6 @@
 @extends('admin.dashboard')
 <link rel="stylesheet" href="{{ asset('/bootstrap/public-bootstrap/css/bootstrap.min.css') }}">
+<title>Admin - Thêm Người Dùng</title>
 
 @section('admin-add-user')
     <form action="{{ route('add_user') }}" method="POST" class="form-register card container mt-5 p-3"

@@ -1,4 +1,5 @@
     @extends('admin.dashboard')
+    <title>Admin - Thêm Sản Phẩm</title>
     @section('admin-add')
         <div class="container mt-5 mb-5">
             <h2 class="mb-4">Add Product Form</h2>
