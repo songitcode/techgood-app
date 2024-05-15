@@ -21,8 +21,8 @@ class InfoUser extends Seeder
             'last_name' => 'Son',
             'email' => 'nguyenson@gmail.com',
             'password' => Hash::make('123456'),
-            'birthday' => '1999-01-01',
-            'photo' => 'avatars/1715440989.png',
+            'birthday' => '2004-06-16',
+            'photo' => 'avatars/1715775934.png',
         ]);
 
         DB::table('users')->insert([

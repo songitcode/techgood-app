@@ -17,7 +17,8 @@
                             </a>
 
                             <div class="info-product">
-                                <a href="#" class="link-name">
+                                <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}"
+                                    class="link-name">
                                     <div class="name-product">
                                         {{ $item->p_name }}
                                     </div>

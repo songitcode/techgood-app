@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const plusButton = document.querySelector('.plus');
     const numbersDiv = document.querySelector('.numbers');
     const quantityInput = document.getElementById('quantity');
-    const maxQuantity = 5; // Số lượng tối đa cho phép
+    const soluongconlai = document.querySelector('.soluongconlai');
+
+    const maxQuantity = soluongconlai.textContent; // Số lượng tối đa cho phép
 
     let quantity = parseInt(numbersDiv.textContent);
 
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             numbersDiv.textContent = quantity;
             quantityInput.value = quantity;
         } else {
-            alert("Chỉ được tăng tối đa là 5 sản phẩm");
+            alert("Sản phẩm còn lại là: " + maxQuantity);
         }
     });
 });

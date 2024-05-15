@@ -15,15 +15,16 @@ class Category extends Seeder
     {
         $categories = [
             ['cate_name' => 'Mobile Phones'],
-            ['cate_name' => 'Laptops'],
-            ['cate_name' => 'Tablets'],
-            ['cate_name' => 'Desktops'],
-            ['cate_name' => 'Cameras'],
-            ['cate_name' => 'Headphones'],
-            ['cate_name' => 'Smart Watches'],
-            ['cate_name' => 'Gaming Consoles'],
-            ['cate_name' => 'Televisions'],
-            ['cate_name' => 'Home Audio Systems'],
+            ['cate_name' => 'Laptop'],
+            ['cate_name' => 'Tablet'],
+            ['cate_name' => 'Man Hinh'],
+            ['cate_name' => 'May Anh'],
+            ['cate_name' => 'Tai Nghe'],
+            ['cate_name' => 'Dong Ho Thong Minh'],
+            ['cate_name' => 'Gaming Console'],
+            ['cate_name' => 'Television'],
+            ['cate_name' => 'Ban Phim'],
+            ['cate_name' => 'Loa'],
         ];
 
         DB::table('category')->insert($categories);
