@@ -11,13 +11,16 @@
                 <label for="username">Tên đăng nhập</label>
                 <input placeholder="Username" class="form-control" type="text" id="username" name="username" required>
             </div>
-            <div class="form-group">
-                <label for="first_name">Tên đầu</label>
-                <input placeholder="Tên đầu" class="form-control" type="text" id="first_name" name="first_name">
-            </div>
-            <div class="form-group">
-                <label for="last_name">Tên cuối</label>
-                <input placeholder="Tên cuối" class="form-control" type="text" id="last_name" name="last_name" required>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="first_name">Tên đầu</label>
+                    <input placeholder="Tên đầu" class="form-control" type="text" id="first_name" name="first_name">
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name">Tên cuối</label>
+                    <input placeholder="Tên cuối" class="form-control" type="text" id="last_name" name="last_name"
+                        required>
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>

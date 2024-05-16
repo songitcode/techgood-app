@@ -73,3 +73,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//
+document.addEventListener('DOMContentLoaded', (event) => {
+    const toggleButton = document.querySelector('.toggle-description');
+    toggleButton.addEventListener('click', toggleDescription);
+});
+
+function toggleDescription() {
+    const shortDescription = document.querySelector('.short-description');
+    const fullDescription = document.querySelector('.full-description');
+    const toggleButton = document.querySelector('.toggle-description');
+
+    if (fullDescription.style.display === 'none') {
+        fullDescription.style.display = 'inline';
+        shortDescription.style.display = 'none';
+        toggleButton.textContent = 'Ẩn bớt';
+    } else {
+        fullDescription.style.display = 'none';
+        shortDescription.style.display = 'inline';
+        toggleButton.textContent = 'Xem thêm';
+    }
+}

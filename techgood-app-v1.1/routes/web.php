@@ -31,7 +31,7 @@ Route::get('chi-tiet-san-pham', [AuthController::class, 'productDetail'])->name(
 
 Route::get('gio-hang-page', [CustomAuthController::class, 'productCartPage'])->name('product_cart');
 Route::get('thanh-toan', [CustomAuthController::class, 'thanhToanPage'])->name('thanh_toan');
-Route::get('admin-dashboard', [AdminController::class, 'dashboardAdminPage'])->name('admin');
+Route::get('admin', [AdminController::class, 'dashboardAdminPage'])->name('admin');
 
 Route::get('admin-add', [AdminController::class, 'addProductAdminPage'])->name('add_product');
 Route::post('admin-add', [AdminController::class, 'addProduct'])->name('admin.add_product');
@@ -53,6 +53,9 @@ Route::post('admin-update-user/{user_id}', [AdminController::class, 'updateUser'
 
 // Route::get('admin-list-users', [CustomAuthController::class, 'listUsers'])->name('users.list_users');
 
+Route::get('admin-categories', [AdminController::class, 'listCategories'])->name('listCategory');
+
+// Route::get('chi-tiet-san-pham/{product_id}', [AuthController::class, 'sanPhamTuongTu'])->name('product.sanphamtuongtu');
 // Auth
 Route::get('sign-out', [AuthController::class, 'signOut'])->name('signout');
 Route::get('login-user', [AuthController::class, 'login'])->name('auth.product_list');
@@ -62,5 +65,5 @@ Route::post('/register', [AuthController::class, 'register'])->name('auth.regist
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });

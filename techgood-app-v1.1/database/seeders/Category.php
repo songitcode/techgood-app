@@ -14,16 +14,16 @@ class Category extends Seeder
     public function run(): void
     {
         $categories = [
-            ['cate_name' => 'Mobile Phones'],
-            ['cate_name' => 'Laptop'],
-            ['cate_name' => 'Tablet'],
-            ['cate_name' => 'Man Hinh'],
-            ['cate_name' => 'May Anh'],
-            ['cate_name' => 'Tai Nghe'],
-            ['cate_name' => 'Dong Ho Thong Minh'],
-            ['cate_name' => 'Gaming Console'],
-            ['cate_name' => 'Television'],
-            ['cate_name' => 'Ban Phim'],
+            ['cate_name' => 'Mobile Phones'], //1
+            ['cate_name' => 'Laptop'], //2
+            ['cate_name' => 'Tablet'], //3
+            ['cate_name' => 'Man Hinh'],//4
+            ['cate_name' => 'May Anh'],//5
+            ['cate_name' => 'Tai Nghe'],//6
+            ['cate_name' => 'Dong Ho Thong'], //7Minh
+            ['cate_name' => 'Gaming Console'],//8
+            ['cate_name' => 'Television'],//9
+            ['cate_name' => 'Ban Phim'],//10
             ['cate_name' => 'Loa'],
         ];
 

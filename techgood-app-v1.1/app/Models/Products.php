@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Products extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'product_id';
 
     protected $table = 'products';
-
-    protected $primaryKey = 'product_id';
 
     public $incrementing = true;
 
     protected $fillable = [
         'p_name',
+        'cate_id',
         'p_price_old',
         'p_price_new',
         'p_description',
@@ -29,4 +29,9 @@ class Products extends Model
         'p_photo4',
         'p_photo5',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'cate_id');
+    }
 }

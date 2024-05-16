@@ -1,5 +1,6 @@
 @extends('dashboard')
 <link rel="stylesheet" href="{{ asset('front-end/css/productlist-style.css') }}">
+<title>Danh sách sản phẩm</title>
 @section('content_listProducts')
     <section class="list">
         <div class="breadcrumb">
@@ -11,16 +12,14 @@
                 @foreach ($products as $item)
                     <div class="card">
                         <form action="#">
-                            <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}">
-                                <img src="{{ asset($item->p_photo1) }}" alt="" width="100%" height="200"
-                                    class="img-product">
+                            <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}" class="product-link">
+                                <img src="{{ asset($item->p_photo1) }}" alt="" class="img-product">
                             </a>
-
                             <div class="info-product">
                                 <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}"
                                     class="link-name">
                                     <div class="name-product">
-                                        {{ $item->p_name }}
+                                        {{ \Illuminate\Support\Str::words($item->p_name, 5, '...') }}
                                     </div>
                                 </a>
                                 <div class="price">
@@ -49,4 +48,11 @@
             </ul>
         </div>
     </section>
+    <script>
+        window.onload = function() {
+            @if (Session::has('success'))
+                alert("{{ Session::get('success') }}");
+            @endif
+        };
+    </script>
 @endsection

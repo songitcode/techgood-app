@@ -21,7 +21,7 @@
                         @endfor
                     </div>
                     <div class="imgs-right img-large">
-                        <img src="{{ $products->p_photo1 }}" alt="" width="500" height="508">
+                        <img src="{{ $products->p_photo1 }}" alt="" width="530" height="508">
                     </div>
                 </div>
             </div>
@@ -35,27 +35,19 @@
                         VNĐ</span>
                     <span class="price-old">{{ number_format($products->p_price_old, 0, ',', '.') }} đ</span>
                 </div>
-                <div class="description-product">{{ $products->p_description }}</div>
+                <div class="description-product">
+                    <span
+                        class="short-description black-color ">{{ \Illuminate\Support\Str::words($products->p_description, 50, '...') }}</span>
+                    <span class="full-description black-color " style="display: none;">{!! $products->p_description !!}</span>
+                    <span class="toggle-description btn-xemthem">Xem thêm</span>
+                </div>
                 <div class="color-product">
                     <p>Màu:</p>
-                    <span class="color" style="background: {{ $products->p_color }}; "></span>
-                    {{-- <label for="color" class="color"></label>
-                    <input type="radio" name="color" id="color">
-
-                    <label for="color" class="color"></label>
-                    <input type="radio" name="color" id="color">
-
-                    <label for="color" class="color"></label>
-                    <input type="radio" name="color" id="color"> --}}
+                    <span class="color" style="background: {{ $products->p_color }};"></span>
                 </div>
                 <div class="type-product">
                     <p>Kiểu máy:</p>
                     {{ $products->p_type }}
-                    {{-- <select name="type-model" id="type-model">
-                        <option value="model"></option>
-                        <option value="model">Kiểu máy 2</option>
-                        <option value="model">Kiểu máy 3</option>
-                    </select> --}}
                 </div>
                 <div class="quantity-product">
                     <p>Số lượng:</p>
@@ -64,12 +56,14 @@
                         <div class="numbers">1</div>
                         <div class="plus">+</div>
                     </div>
-                    <p>còn lại <span class="soluongconlai" style="color: #000;">{{ $products->p_quantity }}</span></p>
+                    <p style="display: none">còn lại <span class="soluongconlai"
+                            style="color: #000;">{{ $products->p_quantity }}</span></p>
                 </div>
                 <div class="addtocard">
                     <button type="submit" class="d-btn-addtocart">Thêm vào giỏ</button>
                 </div>
             </div>
+
         </form>
 
         <div class="info-detail">
@@ -108,13 +102,13 @@
                                 commodi tempora tenetur agendi doloribus.</div>
                         </li>
                         <li class="item-content">
-                            <p class="items">Thong so co ten dai vai cut lam ne</p>
+                            <p class="items">---</p>
                             <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
                                 quisquam molestiae
                                 commodi tempora tenetur agendi doloribus.</div>
                         </li>
                         <li class="item-content">
-                            <p class="items">Thong so co ten dai vai cut lam ne</p>
+                            <p class="items">---</p>
                             <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
                                 quisquam molestiae
                                 commodi tempora tenetur agendi doloribus.</div>
@@ -125,108 +119,34 @@
             <div class="same-products">
                 <h3>Sản phẩm tương tự</h3>
                 <div class="box-product">
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Tên sản phẩm này rất dài đó nha</div>
+                    @if ($similarProducts->isEmpty())
+                        <div class="thong-bao">Không có sản phẩm tương tự nào cả</div>
+                    @else
+                        @foreach ($similarProducts as $similarProduct)
+                            <div class="card-product">
+                                <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}">
+                                    <img src="{{ asset($similarProduct->p_photo1) }}" class="img-product" alt="..."
+                                        width="100%" height="230">
                                 </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
+                                <div class="s-info-product">
+                                    <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}"
+                                        class="s-link-name">
+                                        <div class="s-name-product">{{ $similarProduct->p_name }}</div>
+                                    </a>
+                                    <div class="s-box-price">
+                                        <span
+                                            class="price-old">{{ number_format($similarProduct->p_price_old, 0, ',', '.') }}
+                                            đ</span>
+                                        <span
+                                            class="price-new">{{ number_format($similarProduct->p_price_new, 0, ',', '.') }}
+                                            đ</span>
+                                    </div>
                                 </div>
+                                <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
                             </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
+                        @endforeach
+                    @endif
 
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Blanditiis harum velit dolor cum assumenda sunt?</div>
-                                </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
-
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Tên sản phẩm này rất dài đó nha</div>
-                                </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
-
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Tên sản phẩm này rất dài đó nha</div>
-                                </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
-
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Tên sản phẩm này rất dài đó nha</div>
-                                </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
-
-                    <form action="#">
-                        <div class="card-product">
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="...">
-                            <div class="s-info-product">
-                                <a href="#" class="s-link-name">
-                                    <div class="s-name-product">Tên sản phẩm này rất dài đó nha</div>
-                                </a>
-                                <div class="s-box-price">
-                                    <span class="price-old">20.000.000 đ</span>
-                                    <span class="price-new">15.000.000 đ</span>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -247,9 +167,10 @@
                         </div>
                     </div>
                 </div>
+                {{-- các đánh giá được hiện --}}
                 <div class="row info-evalute">
                     <div class="star-evalute col-md-3">
-                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
                         <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
                         <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
                         <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
@@ -262,6 +183,52 @@
                     </div>
                 </div>
 
+                <div class="row info-evalute">
+                    <div class="star-evalute col-md-3">
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span class="text-eva date-eva">29/03/2024</span>
+                        <h5 class="name-eva">Tên user</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <span style="color: #000"> Sản phẩm quá dở 1 sao</span>
+                    </div>
+                </div>
+
+                <div class="row info-evalute">
+                    <div class="star-evalute col-md-3">
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span class="text-eva date-eva">29/03/2024</span>
+                        <h5 class="name-eva">Tên user</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <span style="color: #000"> Sản phẩm quá dở 1 sao</span>
+                    </div>
+                </div>
+
+                <div class="row info-evalute">
+                    <div class="star-evalute col-md-3">
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span class="text-eva date-eva">29/03/2024</span>
+                        <h5 class="name-eva">Tên user</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <span style="color: #000"> Sản phẩm quá dở 1 sao</span>
+                    </div>
+                </div>
+
+                {{-- Đánh giá được ẩn phía dưới --}}
                 <div class="additional-info" style="display: none;">
                     <div class="row info-evalute">
                         <div class="star-evalute col-md-3">

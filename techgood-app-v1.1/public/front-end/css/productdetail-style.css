@@ -13,7 +13,19 @@
     align-items: center;
     background: #f6f6f6;
 }
+.black-color {
+    color: #000;
+    cursor: default;
+}
 
+.btn-xemthem {
+    color: #255840;
+    font-weight: bold;
+}
+
+.btn-xemthem:hover {
+    color: blue;
+}
 /* detail form */
 .form-details {
     margin: 40px 65px;
@@ -156,8 +168,7 @@ input[name="color"] {
 }
 
 .card-product img.img-product {
-    width: 100%;
-    height: 200px;
+    padding: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.5s;

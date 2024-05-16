@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('./front-end/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('./front-end/css/col-md-row.css') }}">
     <link rel="stylesheet" href="{{ asset('./font-awesome/fontawesome-free-6.5.2-web/css/all.min.css') }}">
     <link rel="icon" href="imgs/logo.png" type="image/x-icon">
 </head>
@@ -77,21 +78,31 @@
 
                         </div>
                         <div class="infor-account row">
-                            <div class="icon-">
-                                <i class="fa fa-user"
-                                    style="color: hsl(152, 41%, 25%); font-size: 30px; float: left; width: 30px; height: 30px;"></i>
-                            </div>
+                            <style>
+
+                            </style>
                             @guest
+                                <div class="icon-">
+                                    <i class="fa fa-user"
+                                        style="color: hsl(152, 41%, 25%); font-size: 30px; float: left; width: 30px; height: 30px;"></i>
+                                </div>
                                 <p>Tên tài khoản</p>
                                 <a class="login link" href="{{ route('login') }}">Đăng Nhập /</a>
                                 <a class="register link" href="{{ route('register') }}">Đăng Ký</a>
                             @else
-                                <p>
-                                    {{-- @foreach ($messi as $user)
-                                        {{ $user->username }}
-                                    @endforeach --}}
-                                </p>
-                                <a class="register link" href="{{ route('signout') }}">Đăng Xuất</a>
+                                <div class="box">
+                                    <div class="image-user">
+                                        <img src="{{ Auth::user()->photo }}" alt="Avatar" width="50px" height="50px">
+                                        <a class="btn-logout" href="{{ route('signout') }}">Đăng Xuất</a>
+                                    </div>
+                                    <div class="name-user">
+                                        xin chào, <br>
+                                        <p style="font-weight: 900; color: green;">
+                                            {{ Auth::user()->first_name }}
+                                            {{ Auth::user()->last_name }}
+                                        </p>
+                                    </div>
+                                </div>
                             @endguest
                         </div>
                         @guest
@@ -120,17 +131,16 @@
                     <div class="drop-down">
                         <div class="grid-1">
                             <ul>
-                                <li><b>Danh Muc Grid 1</b></li>
-                                <li><a href="#">Điện thoại</a></li>
-                                <li><a href="#">Laptop</a></li>
-                                <li><a href="#">Âm thanh</a></li>
-                                <li><a href="#">Đồng hồ</a></li>
-                                <li><a href="#">Phụ kiện</a></li>
-                                <li><a href="#">Màn hình, PC</a></li>
-                                <li><a href="#">Máy tính bảng</a></li>
+                                {{-- Hiển thị danh mục không cần Route điều khiển --}}
+                                @php
+                                    $categories = DB::table('category')->get();
+                                @endphp
+                                @foreach ($categories as $category)
+                                    <li><a href="#">{{ $category->cate_name }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
-                        <div class="grid-2">
+                        {{-- <div class="grid-2">
                             <ul>
                                 <li><b>Danh Muc Grid 2</b></li>
                                 <li><a href="#">Laptop</a></li>
@@ -138,7 +148,7 @@
                                 <li><a href="#">Đồng hồ</a></li>
                                 <li><a href="#">Phụ kiện</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="menu-2 grid-item">
@@ -194,6 +204,7 @@
         </div>
     </section>
     {{-- /yield --}}
+    @yield('content_home')
     @yield('content_login')
     @yield('content_register')
     @yield('content_listProducts')
@@ -201,7 +212,6 @@
     @yield('content_cart')
     @yield('content_abate')
     {{-- yield/ --}}
-
     <!-- footer -->
     <footer>
         <div class="footer-all">

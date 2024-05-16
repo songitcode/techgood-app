@@ -32,36 +32,43 @@
                     required
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    {{-- <div class="form-group col-md-6">
                         <label for="p_type">Category Product:</label>
                         <input type="text" name="p_type" id="p_type" class="form-control">
                         </select>
+                    </div> --}}
+                    <div class="form-group">
+                        <label for="p_type">Type</label>
+                        <select name="p_type" id="p_type" class="form-control">
+                            @foreach ($category as $cate)
+                                <option value="{{ $cate->cate_name }}">{{ $cate->cate_name }}</option>
+                            @endforeach
+                        </select>
                     </div>
+                    <div class="form-group ml-1">
+                        <label for="cate_id">Category Product</label>
+                        <select name="cate_id" id="cate_id" class="form-control">
+                            <option disabled>Chọn Giống Type</option>
+                            @foreach ($category as $cate)
+                                <option value="{{ $cate->cate_id }}">{{ $cate->cate_name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group col-md-6">
                         <label for="quantity">Quantity:</label>
                         <input type="number" class="form-control" id="p_quantity" name="p_quantity"
                             requiredplaceholder="Enter quantity">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="image1">Image 1:</label>
-                    <input type="file" class="form-control-file" id="p_photo1" name="p_photo1" required>
-                </div>
-                <div class="form-group">
-                    <label for="image2">Image 2:</label>
-                    <input type="file" class="form-control-file" id="p_photo2" name="p_photo2" required>
-                </div>
-                <div class="form-group">
-                    <label for="image3">Image 3:</label>
-                    <input type="file" class="form-control-file" id="p_photo3" name="p_photo3" required>
-                </div>
-                <div class="form-group">
-                    <label for="image4">Image 4:</label>
-                    <input type="file" class="form-control-file" id="p_photo4" name="p_photo4" required>
-                </div>
-                <div class="form-group">
-                    <label for="image5">Image 5:</label>
-                    <input type="file" class="form-control-file" id="p_photo5" name="p_photo5" required>
+                <div class="d-flex">
+                    @for ($i = 1; $i <= 5; $i++)
+                        <div class="form-group ml-1">
+                            <label for="image{{ $i }}">Image {{ $i }}:</label>
+                            <input type="file" class="form-control-file" id="p_photo{{ $i }}"
+                                name="p_photo{{ $i }}" required>
+                        </div>
+                    @endfor
                 </div>
                 <button type="submit" class="btn btn-primary float-right">Submit</button>
             </form>
