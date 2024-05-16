@@ -275,6 +275,24 @@ a {
     display: none;
 }
 
+.box {
+    display: flex;
+}
+
+.image-user {
+    margin-right: 20px;
+}
+
+.image-user img {
+    border-radius: 50%;
+}
+
+.btn-logout {
+    display: none;
+    background: red;
+    margin-right: 20px;
+}
+
 @media (max-width: 1024px) {
     .top {
         display: none;
@@ -443,4 +461,27 @@ a {
 .show-menu .menu-nav {
     background: #000;
     height: 100px;
+}
+.box {
+    position: relative;
+}
+
+.btn-logout {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.box:hover .btn-logout {
+    display: block;
+}
+
+.btn-logout:hover {
+    background: rgb(2, 2, 2);
+    color: #fff;
 }

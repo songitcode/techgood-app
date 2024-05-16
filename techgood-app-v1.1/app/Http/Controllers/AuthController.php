@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Products;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
 use Session;
 use Hash;
 use Auth;
@@ -25,9 +26,13 @@ class AuthController extends Controller
         ]);
 
         // Handle file upload if photo is provided
-        $photoPath = null;
         if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('avatars');//avatars
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension(); // Lấy phần mở rộng .jpg, .png...
+            $filename = time() . '.' . $extension; // Tạo tên mới cho tệp tin
+            $file->move(public_path('avatars/'), $filename);  // Upload vào thư mục 'avatars' trong thư mục 'public'
+            // Lưu đường dẫn vào CSDL nếu cần
+            $photoPath = 'avatars/' . $filename;
         }
 
         // Create new user
@@ -42,7 +47,7 @@ class AuthController extends Controller
         $user->save();
 
         // Store success message in session
-        Session::flash('success', 'Registration successful!');
+        Session::flash('success', 'Đăng ký thành công');
 
         // Redirect to home page
         return redirect()->route('login');
@@ -84,7 +89,15 @@ class AuthController extends Controller
     {
         $product_id = $request->get('product_id');
         $products = Products::find($product_id);
+        if (!$products) {
+            return view('auth.product_detail', ['products' => $products]);
+        }
 
-        return view('auth.product_detail', ['products' => $products]);
+        $similarProducts = Products::where('p_type', $products->p_type)
+            ->where('product_id', '!=', $products->product_id)
+            ->take(6)
+            ->get();
+
+        return view('auth.product_detail', compact('products', 'similarProducts'));
     }
 }

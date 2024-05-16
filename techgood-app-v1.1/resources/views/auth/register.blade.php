@@ -7,7 +7,7 @@
     <h1>Tạo tài khoản</h1>
     <section class="view-register">
         <div class="card-register">
-            <form action="{{ route('register') }}" method="POST" class="form-register" enctype="multipart/form-data">
+            <form action="{{ route('auth.register') }}" method="POST" class="form-register" enctype="multipart/form-data">
                 @csrf
                 <div class="input-data">
                     <div class="div-firt box-class">

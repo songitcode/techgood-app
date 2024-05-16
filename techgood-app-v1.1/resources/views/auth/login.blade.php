@@ -25,4 +25,11 @@
             </div>
         </div>
     </section>
+    <script>
+        window.onload = function() {
+            @if (Session::has('success'))
+                alert("{{ Session::get('success') }}");
+            @endif
+        };
+    </script>
 @endsection

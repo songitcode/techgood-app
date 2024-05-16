@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
 use App\Models\Products;
 
 class CustomAuthController extends Controller
@@ -44,4 +45,7 @@ class CustomAuthController extends Controller
     {
         return view("auth.home");
     }
+
+    // Phương thức để hiển thị sản phẩm theo danh mục
+
 }

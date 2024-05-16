@@ -13,10 +13,11 @@ return new class extends Migration {
         Schema::create('products', function (Blueprint $table) {
             // $table->id();
             $table->increments('product_id');
+            $table->integer('cate_id');
             $table->string('p_name');
             $table->string('p_price_old');
             $table->string('p_price_new');
-            $table->string('p_description', 255);
+            $table->text('p_description');
             $table->string('p_color');
             $table->string('p_type'); // kiểu danh mục
             $table->string('p_quantity');

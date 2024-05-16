@@ -22,7 +22,7 @@ class InfoUser extends Seeder
             'email' => 'nguyenson@gmail.com',
             'password' => Hash::make('123456'),
             'birthday' => '2004-06-16',
-            'photo' => 'avatars/1715775934.png',
+            'photo' => 'avatars/1715778452.jpg',
         ]);
 
         DB::table('users')->insert([
