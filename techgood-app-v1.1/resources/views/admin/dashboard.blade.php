@@ -25,7 +25,10 @@
                     phẩm</a></div>
             <div class="second"><a href="{{ route('admin.list_users') }}" class="btn btn-primary">Danh sách user</a>
             </div>
-            <div class="thirst"><a href="" class="btn btn-danger">Đăng xuất</a></div>
+            <div class="second"><a href="{{ route('admin.list_categories') }}" class="btn btn-primary">Danh sách
+                    danh mục</a>
+            </div>
+            <div class="third"><a href="" class="btn btn-danger">Đăng xuất</a></div>
         </div>
     </div>
     </div>
@@ -35,6 +38,16 @@
     @yield('admin-add-user')
     @yield('update-product')
     @yield('update-user')
+    @yield('admin-add-category')
+    @yield('admin-list-category')
+    @yield('admin-edit-category')
+    <script>
+        window.onload = function() {
+            @if (Session::has('success'))
+                alert("{{ Session::get('success') }}");
+            @endif
+        };
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

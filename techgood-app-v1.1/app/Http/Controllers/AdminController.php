@@ -130,9 +130,6 @@ class AdminController extends Controller
             }
         }
 
-        // Debugging: Output the photo paths
-        // dd($photoPaths);
-
         // Tạo sản phẩm mới
         $product = new Products();
         $product->p_name = $validatedData['p_name'];
@@ -201,7 +198,7 @@ class AdminController extends Controller
         $product = Products::find($product_id);
         return view('admin.edit_product', compact('product'));
     }
-
+    
     public function updateProduct(Request $request, $product_id)
     {
         // Validate the incoming data

@@ -46,6 +46,18 @@ class CustomAuthController extends Controller
         return view("auth.home");
     }
 
+    // add category page
+    public function categoryAddPage()
+    {
+        return view("admin.add_category");
+    }
+
+
+    // listCategoriesPage
+    public function listCategoriesPage()
+    {
+        return view("admin.list_categories");
+    }
     // Phương thức để hiển thị sản phẩm theo danh mục
 
 }

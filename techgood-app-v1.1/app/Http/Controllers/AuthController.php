@@ -100,4 +100,11 @@ class AuthController extends Controller
 
         return view('auth.product_detail', compact('products', 'similarProducts'));
     }
+
+    public function showProductsByCategory($categoryId)
+    {
+        $category = Category::findOrFail($categoryId);
+        $products = $category->products;
+        return view('auth.product_list', compact('category', 'products'));
+    }
 }
