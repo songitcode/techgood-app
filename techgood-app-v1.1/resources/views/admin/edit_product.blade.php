@@ -51,7 +51,7 @@
                     <img src="{{ asset($product['p_photo' . $i]) }}" alt="Product Image" style="max-width: 100px;">
                 </div>
             @endfor
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Lưu thay đổi</button>
         </form>
     </div>
 @endsection

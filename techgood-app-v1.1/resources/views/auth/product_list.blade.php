@@ -1,5 +1,6 @@
 @extends('dashboard')
 <link rel="stylesheet" href="{{ asset('front-end/css/productlist-style.css') }}">
+<link rel="stylesheet" href="{{ asset('front-end/css/col-md-row.css') }}">
 <title>Danh sách sản phẩm</title>
 @section('content_listProducts')
     <section class="list">
@@ -12,8 +13,9 @@
                 @foreach ($products as $item)
                     <div class="card">
                         <form action="#">
-                            <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}" class="product-link">
-                                <img src="{{ asset($item->p_photo1) }}" alt="" class="img-product">
+                            <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}"
+                                class="product-link">
+                                <img src="{{ asset($item->p_photo1) }}" alt="" class="img-product" width="100%">
                             </a>
                             <div class="info-product">
                                 <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}"

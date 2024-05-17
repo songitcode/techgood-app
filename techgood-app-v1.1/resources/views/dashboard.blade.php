@@ -136,7 +136,9 @@
                                     $categories = DB::table('category')->get();
                                 @endphp
                                 @foreach ($categories as $category)
-                                    <li><a href="#">{{ $category->cate_name }}</a></li>
+                                    <li><a
+                                            href="{{ route('products.by_category', $category->cate_id) }}">{{ $category->cate_name }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,20 @@ Route::post('admin-update-user/{user_id}', [AdminController::class, 'updateUser'
 
 // Route::get('admin-list-users', [CustomAuthController::class, 'listUsers'])->name('users.list_users');
 
+// List category hien thi trong form them san pham
 Route::get('admin-categories', [AdminController::class, 'listCategories'])->name('listCategory');
+
+Route::get('admin/categories/page', [CustomAuthController::class, 'listCategoriesPage'])->name('admin.list_categories');
+Route::get('admin-add-category', [CustomAuthController::class, 'categoryAddPage'])->name('admin.add_category');
+
+Route::post('admin-add-category', [CategoryController::class, 'addCategory'])->name('add_category');
+Route::get('admin/edit-category/{cate_id}', [CategoryController::class, 'editCategory'])->name('edit_category');
+Route::get('admin-delete-category/{cate_id}', [CategoryController::class, 'deleteCategory'])->name('delete_category');
+Route::post('admin/update-category/{cate_id}', [CategoryController::class, 'updateCategory'])->name('admin.update_category');
+
+
+
+Route::get('products/category/{categoryId}', [AuthController::class, 'showProductsByCategory'])->name('products.by_category');
 
 // Route::get('chi-tiet-san-pham/{product_id}', [AuthController::class, 'sanPhamTuongTu'])->name('product.sanphamtuongtu');
 // Auth
@@ -65,5 +79,5 @@ Route::post('/register', [AuthController::class, 'register'])->name('auth.regist
 
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('auth.login');
 });

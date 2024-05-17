@@ -24,13 +24,12 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
+    margin: 20px;
 }
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    justify-content: space-between;
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 .box-product {

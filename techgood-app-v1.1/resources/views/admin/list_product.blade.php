@@ -100,9 +100,9 @@
                         <td>...</td>
                         <td class="d-flex">
                             <a href="{{ route('edit_product', ['product_id' => $item->product_id]) }}"
-                                class="btn btn-primary btn-sm">Edit</a>
+                                class="btn btn-primary btn-sm">Sửa</a>
                             <a href="{{ route('admin.delete_product', ['product_id' => $item->product_id]) }}"
-                                class="btn btn-danger btn-sm">Delete</a>
+                                class="btn btn-danger btn-sm">Xóa</a>
                         </td>
                     </tr>
                 @endforeach
