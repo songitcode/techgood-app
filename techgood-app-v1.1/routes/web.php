@@ -76,6 +76,9 @@ Route::get('remove-cart/{cart_id}', [CartController::class, 'remove'])->name('re
 
 Route::get('/search', [AuthController::class, 'search'])->name('product.search');
 
+Route::get('/product/{product_id}/review', [ReviewController::class, 'listReviews'])->name('review.product');
+Route::post('/product/{product_id}/review', [ReviewController::class, 'storeReview'])->name('review.store');
+
 // Route::get('chi-tiet-san-pham/{product_id}', [AuthController::class, 'sanPhamTuongTu'])->name('product.sanphamtuongtu');
 // Auth
 Route::get('sign-out', [AuthController::class, 'signOut'])->name('signout');

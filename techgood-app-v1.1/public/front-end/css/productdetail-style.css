@@ -412,7 +412,7 @@ li.item-content p.items {
     margin-top: var(--bs-gutter-y);
 }
 
-.star {
+/* .star {
     display: inline-block;
     cursor: pointer;
 }
@@ -423,6 +423,16 @@ li.item-content p.items {
 
 .fa-star.checked {
     color: gold;
+} */
+
+.star-rating i {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star-rating i.selected {
+    color: gold; /* Or any other color you prefer */
 }
 
 @media (min-width: 768px) {
