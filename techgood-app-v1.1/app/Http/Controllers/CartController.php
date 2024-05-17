@@ -65,4 +65,12 @@ class CartController extends Controller
 
         return redirect()->route('product_cart')->with('success', 'Xóa thành công');
     }
+
+    public function index()
+    {
+        // Lấy số lượng sản phẩm trong giỏ hàng của người dùng hiện tại
+        $cartItemCount = Cart::where('user_id', auth()->id())->count();
+
+        return view('dashboard', compact('cartItemCount'));
+    }
 }

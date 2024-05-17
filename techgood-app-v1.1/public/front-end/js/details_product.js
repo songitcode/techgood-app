@@ -26,18 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // Cụm đánh giá sao
-document.addEventListener("DOMContentLoaded", function () {
-    const starClusters = document.querySelectorAll('.star');
+document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star-rating i');
 
-    starClusters.forEach(function (cluster, index) {
-        cluster.addEventListener('click', function () {
-            document.querySelectorAll('.star-review').forEach(star => star.classList.remove(
-                'checked'));
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            const rating = this.getAttribute('data-rating');
+            document.getElementById('starRating').value = rating;
 
-            cluster.querySelectorAll('.star-review').forEach(star => star.classList.add(
-                'checked'));
-
-            document.getElementById('starRating').value = index + 1;
+            // Update star colors
+            stars.forEach(s => {
+                if (parseInt(s.getAttribute('data-rating')) <= rating) {
+                    s.classList.add('selected');
+                } else {
+                    s.classList.remove('selected');
+                }
+            });
         });
     });
 });

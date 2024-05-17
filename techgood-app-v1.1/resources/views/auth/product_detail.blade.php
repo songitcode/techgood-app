@@ -160,6 +160,18 @@
                     </div>
                 </div>
                 {{-- các đánh giá được hiện --}}
+                {{-- @foreach ($reviews as $item) --}}
+                <div class="row info-evalute">
+                    <div class="star-evalute col-md-3">
+                        <span><i class="fa-sharp fa-solid fa-star text-eva"></i></span>
+                        <span class="text-eva date-eva">29/03/2024</span>
+                        {{-- <h5 class="name-eva">{{ $item->name }}</h5> --}}
+                    </div>
+                    <div class="col-md-9">
+                        <span style="color: #000"> Sản phẩm quá dở 1 sao</span>
+                    </div>
+                </div>
+                {{-- @endforeach --}}
                 <div class="row info-evalute">
                     <div class="star-evalute col-md-3">
                         <span><i class="fa-sharp fa-solid fa-star text-eva c-255840"></i></span>
@@ -256,56 +268,39 @@
                 </div>
             </div>
             <div class="table-evalute col-md-4">
-                <form action="#" method="POST">
+                <form action="{{ route('review.store', ['product_id' => $products->product_id]) }}" method="POST">
+                    {{-- @dd($products->product_id) --}}
                     @csrf
                     <h1>Thêm đánh giá</h1>
                     <div class="danh-gia">
                         <p>Đánh giá của bạn <span style="color: red; font-weight: 800;">*</span></p>
                         <div class="tbl-star-evalute">
-                            <div class="star">
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
+                            <div class="star-rating">
+                                <i class="fa fa-star" data-rating="1"></i>
+                                <i class="fa fa-star" data-rating="2"></i>
+                                <i class="fa fa-star" data-rating="3"></i>
+                                <i class="fa fa-star" data-rating="4"></i>
+                                <i class="fa fa-star" data-rating="5"></i>
                             </div>
-                            <div class="star">
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                            </div>
-                            <div class="star">
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                            </div>
-                            <div class="star">
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                            </div>
-                            <div class="star">
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                                <i class="fa-sharp fa-solid fa-star text-eva star-review"></i>
-                            </div>
+                            <input type="hidden" name="star_rating" id="starRating" value="">
                         </div>
                     </div>
-                    <input type="hidden" id="starRating" name="starRating" value="">
+                    <input type="hidden" id="starRating" name="star_rating" value="">
                     <div class="area-comment">
                         <p>Nhận xét của bạn <span style="color: red; font-weight: 800;">*</span></p>
-                        <map name="comment">
-                            <textarea name="comment" id="comment" cols="10" rows="5" placeholder="VD: sản phẩm tốt, . . ."></textarea>
-                        </map>
+                        <textarea name="comment" id="comment" cols="10" rows="5" placeholder="VD: sản phẩm tốt, . . ."
+                            required></textarea>
                     </div>
                     <div class="row info-comment">
                         <div class="eva-name col-md-5">
                             <p>Tên <span style="color: red; font-weight: 800;">*</span></p>
-                            <input type="text" placeholder="Tên của bạn" class="i-name-eva" name="i-name-eva"
-                                required>
+                            <input type="text" placeholder="Tên của bạn" class="i-name-eva" name="name"
+                                id="name" required>
                         </div>
                         <div class="eva-email col-md-5">
                             <p>Email <span style="color: red; font-weight: 800;">*</span></p>
-                            <input type="text" placeholder="Email của bạn" class="i-email-eva" name="i-email-eva"
-                                required>
+                            <input type="email" placeholder="Email của bạn" class="i-email-eva" name="email"
+                                id="email" required>
                         </div>
                     </div>
                     <div class="container-btn">

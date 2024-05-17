@@ -113,8 +113,11 @@
                                 </div>
 
                                 <div class="item">
+                                    @php
+                                        $cartItemCount = \App\Models\Cart::where('user_id', auth()->id())->count();
+                                    @endphp
                                     <a href="{{ route('product_cart') }}" class="cart-link">Giỏ Hàng</a>
-                                    <p>SL: 0</p>
+                                    <p>SL: {{ $cartItemCount }}</p>
                                 </div>
                             </div>
                         @endguest
