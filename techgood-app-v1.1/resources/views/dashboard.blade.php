@@ -57,7 +57,7 @@
                             height="70px"></a>
                 </div>
                 <div class="top-center">
-                    <form class="search" action="#" method="GET">
+                    <form class="search" action="{{ route('product.search') }}" method="GET">
                         <label for="search-nav" class="lb-search">Tim Kiem</label>
                         <input class="search-input" type="text" placeholder="Bạn muốn tìm gì . . ." name="search-nav"
                             id="search-nav">
@@ -286,6 +286,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.onload = function() {
+            @if (Session::has('success'))
+                alert("{{ Session::get('success') }}");
+            @endif
+        };
+    </script>
     <script src="{{ asset('front-end/js/dashboard.js') }}"></script>
 </body>
 

@@ -6,9 +6,11 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Cart;
 use Session;
 use Hash;
 use Auth;
+use DB;
 
 class AuthController extends Controller
 {
@@ -58,9 +60,15 @@ class AuthController extends Controller
     {
         $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
-            // Đăng nhập thành công
+            // Get the authenticated user
+            $user = Auth::user();
+
+            if ($user->username === 'admin' && $request->password === '123456') {
+                return redirect()->route('admin')->with('success', 'Đăng nhập thành công!');
+            }
             return redirect()->route('product_list')->with('success', 'Đăng nhập thành công!');
         }
+
         // Đăng nhập thất bại, hiển thị thông báo lỗi
         return back()->withErrors([
             'message' => 'Thông tin đăng nhập không đúng. Vui lòng thử lại!',
@@ -87,6 +95,7 @@ class AuthController extends Controller
 
     public function productDetail(Request $request)
     {
+
         $product_id = $request->get('product_id');
         $products = Products::find($product_id);
         if (!$products) {
@@ -98,13 +107,30 @@ class AuthController extends Controller
             ->take(6)
             ->get();
 
+
         return view('auth.product_detail', compact('products', 'similarProducts'));
     }
 
     public function showProductsByCategory($categoryId)
     {
         $category = Category::findOrFail($categoryId);
-        $products = $category->products;
+        $products = $category->products()->paginate(5);
         return view('auth.product_list', compact('category', 'products'));
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('search-nav');
+        $products = DB::table('products')
+            ->where('p_name', 'like', "%$keyword%")
+            ->orWhere('p_type', 'like', "%$keyword%")
+            ->paginate(5);
+
+        if ($products->isEmpty()) {
+            $message = "Không có sản phẩm nào cho từ khóa '$keyword'";
+        } else {
+            $message = "";
+        }
+        return view('auth.product_list', ['products' => $products, 'message' => $message]);
     }
 }

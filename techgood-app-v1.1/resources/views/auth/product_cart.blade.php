@@ -19,65 +19,27 @@
                         <th>Xóa</th>
                     </tr>
                     {{-- Hiển thị danh sách sản phẩm thêm đặt vòng foreach tại đây --}}
-                    <tr>
-                        <td>
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="..." width="50" height="50">
-                        </td>
-                        <td>Name product here</td>
-                        <td>Price product here</td>
-                        <td>
-                            <div class="box-number">
-                                <div class="minus">-</div>
-                                <div class="numbers">1</div>
-                                <div class="plus">+</div>
-                            </div>
-                        </td>
-                        <td>15.000.000 đ</td>
-                        <td>
-                            <button type="button" class="btn-delete">X</button>
-                        </td>
-                    </tr>
+                    @foreach ($cartItems as $product)
+                        <tr>
+                            <td>
+                                <img src="{{ $product['p_photo1'] }}" class="img-product" alt="Product Image" width="50"
+                                    height="50">
+                            </td>
+                            <td>{{ $product['p_name'] }}</td>
+                            <td>{{ number_format($product['p_price_new'], 0, ',', '.') }}đ</td>
+                            <td>
+                                <div class="box-number">
+                                    <div class="numbers">{{ $product['quantity'] }}</div>
+                                </div>
+                            </td>
+                            <td>{{ number_format($product['p_price_new'] * $product['quantity'], 0, ',', '.') }}đ</td>
+                            <td>
+                                <a href="{{ route('remove_cart', ['cart_id' => $product->cart_id]) }}"
+                                    class="btn-delete">X</a>
+                            </td>
+                        </tr>
+                    @endforeach
                     {{-- /foreach --}}
-                    <tr>
-                        <td>
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="..." width="50" height="50">
-                        </td>
-                        <td>Name product here</td>
-                        <td>Price product here</td>
-                        <td>
-                            <div class="box-number">
-                                <div class="minus">-</div>
-                                <div class="numbers">1</div>
-                                <div class="plus">+</div>
-                            </div>
-                        </td>
-                        <td>15.000.000 đ</td>
-                        <td>
-                            <button type="button" class="btn-delete">X</button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <img src="https://th.bing.com/th/id/R.595fa4992c11870894827e96ef8a7100?rik=SGGWJ5QllDFfIg&pid=ImgRaw&r=0"
-                                class="img-product" alt="..." width="50" height="50">
-                        </td>
-                        <td>Name product here</td>
-                        <td>Price product here</td>
-                        <td>
-                            <div class="box-number">
-                                <div class="minus">-</div>
-                                <div class="numbers">1</div>
-                                <div class="plus">+</div>
-                            </div>
-                        </td>
-                        <td>15.000.000 đ</td>
-                        <td>
-                            <button type="button" class="btn-delete">X</button>
-                        </td>
-                    </tr>
                 </table>
                 <a href="{{ route('product_list') }}" class="btn-comeback">&#8592; Quay lại danh sách</a>
             </div>
@@ -86,14 +48,23 @@
                 <div class="box-total">
                     <div class="provisional">
                         <p>Tạm tính</p>
-                        <p>15.000.000 đ</p>
+                        @php
+                            $subtotal = 0; // Khởi tạo biến subtotal
+                        @endphp
+                        @foreach ($cartItems as $product)
+                            @php
+                                $subtotal += $product['p_price_new'] * $product['quantity']; // Tính tổng tiền cho mỗi sản phẩm
+                            @endphp
+                        @endforeach
+                        <p>{{ number_format($subtotal, 0, ',', '.') }} đ</p> <!-- Hiển thị tạm tính -->
                     </div>
                     <br>
                     <div class="total">
                         <p>Tổng tiền</p>
-                        <p>15.000.000 đ</p>
+                        <p>{{ number_format($subtotal, 0, ',', '.') }} đ</p> <!-- Hiển thị tổng tiền -->
                     </div>
                 </div>
+
                 <button type="button" class="btn-order">Tiến hành đặt hàng</button>
             </div>
         </div>

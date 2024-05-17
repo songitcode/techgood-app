@@ -32,7 +32,7 @@ class InfoUser extends Seeder
             'email' => 'nguyenan@gmail.com',
             'password' => Hash::make('123456'),
             'birthday' => '1999-01-01',
-            'photo' => null,
+            'photo' => 'avatars/an-avatar.jpg',
         ]);
 
         DB::table('users')->insert([
@@ -42,7 +42,7 @@ class InfoUser extends Seeder
             'email' => 'trantin@gmail.com',
             'password' => Hash::make('123456'),
             'birthday' => '1999-01-01',
-            'photo' => null,
+            'photo' => 'avatars/tin-avatar.jpg',
         ]);
 
         DB::table('users')->insert([
@@ -52,7 +52,7 @@ class InfoUser extends Seeder
             'email' => 'tranduy@gmail.com',
             'password' => Hash::make('123456'),
             'birthday' => '1999-01-01',
-            'photo' => null,
+            'photo' => 'avatars/an-avatar.jpg',
         ]);
 
 
@@ -63,7 +63,18 @@ class InfoUser extends Seeder
             'email' => 'kimngan@gmail.com',
             'password' => Hash::make('123456'),
             'birthday' => '1999-01-01',
-            'photo' => null,
+            'photo' => 'avatars/kimngan-avatar.jpg',
+        ]);
+
+        // admin
+        DB::table('users')->insert([
+            'username' => 'admin',
+            'first_name' => 'Admin',
+            'last_name' => '1',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('123456'),
+            'birthday' => '1999-01-01',
+            'photo' => 'avatars/admin-abuse.png',
         ]);
     }
 }
