@@ -8,11 +8,15 @@
             <p>Tất cả sản phẩm</p>
         </div>
         {{-- product --}}
+        @if (!empty($message))
+            <p>{{ $message }}</p>
+        @endif
         <div class="box-product">
             <div class="products">
                 @foreach ($products as $item)
                     <div class="card">
-                        <form action="#">
+                        <form action="{{ route('add_to_cart', ['product_id' => $item->product_id]) }}" method="POST">
+                            @csrf
                             <a href="{{ route('product_detail', ['product_id' => $item->product_id]) }}"
                                 class="product-link">
                                 <img src="{{ asset($item->p_photo1) }}" alt="" class="img-product" width="100%">
@@ -39,14 +43,18 @@
         {{-- Phan trang --}}
         <div class="pagination">
             <ul>
-                <span class="pre">
-                    < </span>
-                        <li class="active">1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>...</li>
-                        <span class="next">></span>
+                @foreach ($products->getUrlRange($products->currentPage() - 1, $products->currentPage() + 1) as $page => $url)
+                    <li class="{{ $page == $products->currentPage() ? 'active' : '' }}">
+                        <a href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                @endforeach
+
+                {{-- Next Page Link --}}
+                @if ($products->hasMorePages())
+                    <li><a href="{{ $products->nextPageUrl() }}" rel="next">›</a></li>
+                @else
+                    <li class="disabled">›</li>
+                @endif
             </ul>
         </div>
     </section>

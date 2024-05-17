@@ -1,5 +1,5 @@
 @extends('dashboard')
-
+<title>Đăng nhập</title>
 <link rel="stylesheet" href="{{ asset('front-end/css/login-style.css') }}">
 @section('content_login')
     <section class="login-view">
@@ -25,11 +25,4 @@
             </div>
         </div>
     </section>
-    <script>
-        window.onload = function() {
-            @if (Session::has('success'))
-                alert("{{ Session::get('success') }}");
-            @endif
-        };
-    </script>
 @endsection

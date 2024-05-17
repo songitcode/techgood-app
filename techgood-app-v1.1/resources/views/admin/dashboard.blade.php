@@ -19,7 +19,7 @@
 
 <body>
     <div class="container">
-        <h2 class="m-5">Admin: Name</h2>
+        <h2 class="m-5">Admin</h2>
         <div class="box-admin border p-3">
             <div class="first"><a href="{{ route('admin.list_product') }}" class="btn btn-primary">Danh sách sản
                     phẩm</a></div>
@@ -28,7 +28,7 @@
             <div class="second"><a href="{{ route('admin.list_categories') }}" class="btn btn-primary">Danh sách
                     danh mục</a>
             </div>
-            <div class="third"><a href="" class="btn btn-danger">Đăng xuất</a></div>
+            <div class="third"><a href="{{ route('signout') }}" class="btn btn-danger">Đăng xuất</a></div>
         </div>
     </div>
     </div>

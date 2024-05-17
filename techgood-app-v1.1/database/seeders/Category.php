@@ -24,7 +24,7 @@ class Category extends Seeder
             ['cate_name' => 'Gaming Console'],//8
             ['cate_name' => 'Television'],//9
             ['cate_name' => 'Ban Phim'],//10
-            ['cate_name' => 'Loa'],
+            ['cate_name' => 'Loa'], //11
         ];
 
         DB::table('category')->insert($categories);

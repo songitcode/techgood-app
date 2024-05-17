@@ -36,7 +36,7 @@ class Products extends Seeder
             'p_color' => '#f50000',
             'p_type' => 'Mobile Phones',
             'p_quantity' => 5,
-            'p_photo1' => 'avatars/1715778856_1.jpg',
+            'p_photo1' => 'avatars/1715778856_4.jpg',
             'p_photo2' => 'avatars/1715778856_2.png',
             'p_photo3' => 'avatars/1715778856_3.png',
             'p_photo4' => 'avatars/1715778856_4.png',
@@ -216,61 +216,148 @@ class Products extends Seeder
 
         //7
         DB::table('products')->insert([
-            'p_name' => 'Điện thoại Xiaomi Redmi Note 13 Pro 128GB ',
-            'cate_id' => 7,
-            'p_price_old' => 7290000,
-            'p_price_new' => 6290000,
-            'p_description' => 'Sự bùng nổ của công nghệ di động trong những năm gần đây đã mang đến cho người dùng vô số lựa chọn smartphone đa dạng. Trong phân khúc tầm trung, Xiaomi Redmi Note 13 Pro 128GB nổi lên như một ứng cử viên sáng giá với những ưu điểm vượt trội về thiết kế, hiệu năng nhờ chip Helio G99-Ultra, camera 200 MP và kết hợp sạc nhanh 67 W.
-            Thiết kế đẹp mắt và hỗ trợ chuẩn IP54
-            Điện thoại có vẻ ngoài hiện đại và sang trọng, với khung viền vuông vức giúp tạo điểm nhấn cho thiết kế khi mang lại cảm giác mạnh mẽ, nam tính lúc cầm nắm. Đi cùng với đó là mặt lưng và khung nhựa nhẹ được làm bóng, Redmi Note 13 Pro mang đến vẻ đẹp sang trọng, bóng bẩy, thu hút mọi ánh nhìn.
+            'p_name' => 'Loa Bluetooth AVA+ Go Z09',
+            'cate_id' => 11,
+            'p_price_old' => 190000,
+            'p_price_new' => 90000,
+            'p_description' => 'Loa Bluetooth AVA+ Go Z09 là phiên bản loa giá rẻ nhưng có thiết kế ấn tượng với ngoại hình nhỏ gọn, đèn LED sống động, đi cùng các tiện ích hiện đại, phục vụ tốt nhu cầu giải trí cơ bản của người dùng.
+            • Loa AVA+ có thiết kế gọn nhẹ từ nhựa cao cấp, khối lượng chỉ 0.165 kg dễ dàng bỏ vào balo, túi xách đồng hành cùng bạn mọi lúc mọi nơi.
 
-            Ở vị trí giao nhau giữa khung viền vuông và hai mặt trước sau, máy được làm cong nhẹ để tạo ra một cảm giác cầm nắm thoải mái và tự nhiên. Điều này giúp người dùng dễ dàng sử dụng thiết bị trong thời gian dài mà không gặp phải cảm giác mệt mỏi hay không thoải mái.
+            • Loa Bluetooth có chất lượng âm thanh sống động, chân thực, hỗ trợ kết nối 2 loa cùng lúc để tăng gấp đôi mức công suất.
 
-            Xiaomi Redmi Note 13 Pro không chỉ nổi bật với thiết kế, mà còn có sự đa dạng trong màu sắc, phù hợp với sở thích cá nhân của mỗi người dùng. Tùy chọn màu sắc gồm có xanh lá, đen và tím, giúp người dùng có thêm lựa chọn để thể hiện phong cách riêng của mình.
+            • Tích hợp đèn LED với màu sắc đa dạng, có thể dễ dàng tuỳ chỉnh mang đến không gian âm nhạc phong phú.
 
-            Với viền dưới mỏng chỉ với 2.25 mm, Redmi Note 13 Pro mang lại trải nghiệm sử dụng mượt mà và còn tạo điểm nhấn cho thiết kế tổng thể của sản phẩm. Đặc biệt, việc đạt được tiêu chuẩn kháng nước và bụi IP54 cũng là điểm nhấn giúp bảo vệ thiết bị khỏi những tác động từ môi trường bên ngoài, gia tăng tuổi thọ và độ bền cho sản phẩm.
+            • Công nghệ Bluetooth 5.3 hiện đại giúp kết nối thêm phần mượt mà, ổn định trong phạm vi từ 8 - 10 mét.
 
-            Xiaomi Redmi Note 13 Pro thu hút sự chú ý như là một trung tâm giải trí di động với tích hợp loa kép đi kèm công nghệ âm thanh Dolby Atmos, từ đó mang lại trải nghiệm âm thanh sống động, chi tiết và mạnh mẽ, làm cho việc xem phim, nghe nhạc trở nên thú vị hơn bao giờ hết.
-
-            Màn hình lớn đi kèm tần số quét cao 120 Hz
-            Kích thước lớn 6.67 inch của màn hình này không chỉ mang lại trải nghiệm hấp dẫn hơn khi xem phim hay chơi game mà còn cho phép người dùng tận hưởng mọi chi tiết một cách rõ ràng. Độ phân giải Full HD+ (1080 x 2400 Pixels) cung cấp một bức tranh sống động và sắc nét, từng pixel đều phản ánh một thế giới đẹp mắt, đậm chất hiện đại.
-
-            Tấm nền AMOLED cao cấp của Xiaomi Redmi Note 13 Pro đem lại màu sắc rực rỡ và sống động, giúp tái tạo được độ chân thực của mọi hình ảnh. Tấm nền này không chỉ làm cho màu sắc trở nên sống động hơn mà còn tăng cường độ tương phản, đảm bảo mọi chi tiết đều nổi bật và rõ ràng.
-
-            Với tần số quét 120 Hz, mỗi hành động trên màn hình đều trở nên mượt mà đáng kinh ngạc. Từ những cử động nhỏ nhất trong game đến việc cuộn nhanh trên mạng xã hội, mọi thao tác đều được tái hiện một cách trơn tru và tự nhiên.
-
-            Với độ sáng tối đa lên đến 1300 nits, giúp màn hình hiển thị rõ ràng ngay cả dưới ánh nắng mạnh mẽ nhất. Hơn nữa, việc hỗ trợ 100% DCI-P3 cũng sẽ giúp tăng cường độ tương phản và dải màu để mang lại hình ảnh chân thực và sống động như nội dung chiếu rạp.
-
-            Camera 200 MP ghi lại sắc nét mọi khoảnh khắc
-            Camera chính với độ phân giải cao 200 MP của Xiaomi Redmi Note 13 Pro thực sự là một công cụ chụp ảnh ấn tượng, là một cánh cửa để khám phá thế giới xung quanh một cách chi tiết và sắc nét hơn bao giờ hết.
-
-            Khả năng chụp ảnh trong mọi điều kiện, kể cả trong điều kiện ánh sáng yếu hay rung lắc nhờ hỗ trợ của chống rung OIS, từ đó giúp bắt lấy những khoảnh khắc đẹp một cách trọn vẹn.
-
-            Với camera góc siêu rộng 8 MP, Xiaomi Redmi Note 13 Pro mang đến khả năng thu trọn mọi khung cảnh vào khung hình. Từ những bãi biển bao la đến những đường phố nhộn nhịp, bạn có thể ghi lại mọi khoảnh khắc một cách độc đáo và đầy ấn tượng.
-
-            Camera macro 2 MP cũng là một điểm đáng chú ý của Xiaomi Redmi Note 13 Pro, đây có thể là cánh cửa để bạn khám phá thế giới cận cảnh đầy thú vị. Tận hưởng việc ghi lại các chi tiết nhỏ nhất của cánh hoa hay giọt sương, mở ra một thế giới mới mẻ và tuyệt vời hơn để nâng cao sự thích thú mỗi khi chụp ảnh trên điện thoại.
-
-            Cấu hình ổn định với chip MediaTek Helio G99-Ultra
-            Với vi xử lý MediaTek Helio G99-Ultra, chiếc điện thoại Xiaomi này mang lại hiệu năng mạnh mẽ, phù hợp với nhu cầu sử dụng đa nhiệm của người dùng hiện nay.
-
-            Con chip MediaTek này trên Xiaomi Redmi Note 13 Pro đạt trên 450.000 điểm thông qua Antutu (thông tin từ web hãng), chứng tỏ sức mạnh và hiệu suất ấn tượng của nó. Điều này đảm bảo rằng bạn có thể thực hiện các tác vụ nặng nề mà không gặp trở ngại và tận hưởng trải nghiệm sử dụng mượt mà, linh hoạt.
-
-            Nhờ có RAM 8 GB, chiếc điện thoại Android này mang đến khả năng đa nhiệm mạnh mẽ, giúp bạn mở đồng thời nhiều ứng dụng và chạy các tác vụ nặng một cách mượt mà và hiệu quả. Không cần phải lo lắng về việc điện thoại trở nên chậm chạp khi sử dụng đồng thời nhiều ứng dụng hay game đòi hỏi tài nguyên.
-
-            Pin 5000 mAh kết hợp cùng sạc nhanh 67 W
-            Xiaomi Redmi Note 13 Pro được trang bị viên pin 5000 mAh, đảm bảo cho người dùng sự yên tâm và thoải mái trong mọi hoạt động hằng ngày. Từ việc trò chuyện liên tục qua điện thoại, duyệt web, xem video đến chơi game.
-
-            Công nghệ sạc nhanh 67 W của máy mang lại cho người dùng trải nghiệm sạc pin mạnh mẽ và hiệu quả. Điện thoại có thể nạp đầy viên pin chỉ trong thời gian ngắn. Điều này không chỉ giúp bạn tiết kiệm thời gian mà còn tạo điều kiện thuận lợi cho việc sử dụng điện thoại một cách linh hoạt và không gián đoạn.
-
-            Xiaomi Redmi Note 13 Pro không chỉ là một điện thoại thông minh có thiết kế đẹp và nhiều tính năng, mà còn là một chiếc máy mạnh mẽ nhờ vào hiệu suất ấn tượng và khả năng chụp ảnh xuất sắc. Sự kết hợp này cam kết mang lại trải nghiệm smartphone tối ưu nhất, đáp ứng mọi nhu cầu từ công việc đến giải trí.',
-            'p_color' => 'green',
-            'p_type' => 'Mobile Phones',
+            • Hỗ trợ nhiều phím bấm trên loa giúp bạn dễ dàng điều khiển như: Chuyển bài hát, phát/dừng chơi nhạc, tăng/giảm âm lượng, thay đổi chế độ đèn, thay đổi chế độ kết nối.',
+            'p_color' => '#fff',
+            'p_type' => 'Loa',
             'p_quantity' => 6,
-            'p_photo1' => 'avatars/1715879832_1.jpg',
-            'p_photo2' => 'avatars/1715879832_2.jpg',
-            'p_photo3' => 'avatars/1715879832_3.jpg',
-            'p_photo4' => 'avatars/1715879832_4.jpg',
-            'p_photo5' => 'avatars/1715879832_5.jpg',
+            'p_photo1' => 'avatars/loa-bluetooth-ava-go-z09-hc-1.jpg',
+            'p_photo2' => 'avatars/loa-bluetooth-ava-go-z09-hc-2.jpg',
+            'p_photo3' => 'avatars/loa-bluetooth-ava-go-z09-hc-3.jpg',
+            'p_photo4' => 'avatars/loa-bluetooth-ava-go-z09-hc-4.jpg',
+            'p_photo5' => 'avatars/loa-bluetooth-ava-go-z09-hc-5.jpg',
+        ]);
+
+        //8
+        DB::table('products')->insert([
+            'p_name' => 'Loa Bluetooth Monster Sparkle ',
+            'cate_id' => 11,
+            'p_price_old' => 2600000,
+            'p_price_new' => 1990000,
+            'p_description' => 'Loa Bluetooth Monster Sparkle với hệ thống đèn LED nổi bật cùng thiết kế thuôn dài đẹp mắt, công nghệ âm thanh sống động, tốc độ kết nối nhanh chóng, tiện lợi sử dụng trong những bữa tiệc cá nhân và các buổi tụ họp bạn bè hàng ngày.
+            • Thiết kế gọn gàng, khối lượng khoảng 2.6 kg dễ dàng di chuyển khi cần, phù hợp với nhiều không gian nội thất trong nhà.
+
+            • Cuốn hút trong từng điệu nhạc với mức công suất 30 W cùng công nghệ âm thanh độc quyền Monster Sound trên loa đem đến chất âm sống động, cảm giác như đang tận hưởng không gian giải trí tại rạp chiếu phim.
+
+            • Dung lượng pin lớn, lưu trữ năng lượng cho cả ngày dài sử dụng, sạc 1 lần khoảng 4 tiếng là có ngay 12 giờ sử dụng liên tục (ở mức 50% âm lượng).
+
+            • Loa Monster hỗ trợ công nghệ Bluetooth 5.3 cho tốc độ kết nối nhanh hơn, đường truyền ổn định và mượt mà, liền mạch trải nghiệm âm thanh của bạn.
+
+            • Hiệu ứng đèn LED nhấp nháy nhiều màu sắc cùng khả năng chuyển nhịp theo tiếng nhạc cho người dùng mãn nhãn.',
+            'p_color' => '#fff',
+            'p_type' => 'Loa',
+            'p_quantity' => 6,
+            'p_photo1' => 'avatars/loa-bluetooth-monster-sparkle-1-1.jpg',
+            'p_photo2' => 'avatars/loa-bluetooth-monster-sparkle-2-1.jpg',
+            'p_photo3' => 'avatars/loa-bluetooth-monster-sparkle-3-1.jpg',
+            'p_photo4' => 'avatars/loa-bluetooth-monster-sparkle-4-1.jpg',
+            'p_photo5' => 'avatars/loa-bluetooth-monster-sparkle-5-1.jpg',
+        ]);
+
+        //9
+        DB::table('products')->insert([
+            'p_name' => 'Loa Bluetooth AVA+ Go Z12 ',
+            'cate_id' => 11,
+            'p_price_old' => 240000,
+            'p_price_new' => 120000,
+            'p_description' => 'Loa Bluetooth AVA+ Go Z12 sở hữu ngoại hình nhỏ gọn với đèn LED ấn tượng, công nghệ Bluetooth 5.3 hiện đại và khả năng kết nối cùng lúc 2 loa giúp không gian giải trí của bạn thêm phần sống động.
+            • Loa Bluetooth được hoàn thiện từ chất liệu nhựa cao cấp, thiết kế nhỏ gọn giúp bạn dễ dàng mang theo mọi lúc mọi nơi.
+
+            • Loa AVA+ có công suất 5 W, cho âm thanh rõ ràng và sống động trong không gian nhỏ như phòng ngủ, bàn làm việc hay nhu cầu sử dụng cá nhân.
+
+            • Công nghệ Bluetooth 5.3 hiện đại giúp kết nối thêm phần nhanh chóng, giảm thiểu tối đa độ nhiễu, rè.
+
+            • Cho phép bạn kết nối cùng lúc 2 loa nhằm khuếch đại âm thanh, cho không gian giải trí thêm phần thư giãn.
+
+            • Hỗ trợ nhiều phím điều khiển giúp bạn dễ dàng thao tác như: Chuyển bài hát, phát/dừng chơi nhạc, tăng/giảm âm lượng, thay đổi chế độ đèn, thay đổi chế độ kết nối.',
+            'p_color' => '#fff',
+            'p_type' => 'Loa',
+            'p_quantity' => 20,
+            'p_photo1' => 'avatars/loa-bluetooth-ava-go-z12-hc-1.jpg',
+            'p_photo2' => 'avatars/loa-bluetooth-ava-go-z12-hc-2.jpg',
+            'p_photo3' => 'avatars/loa-bluetooth-ava-go-z12-hc-3.jpg',
+            'p_photo4' => 'avatars/loa-bluetooth-ava-go-z12-hc-4.jpg',
+            'p_photo5' => 'avatars/loa-bluetooth-ava-go-z12-hc-5.jpg',
+        ]);
+
+        //10
+        DB::table('products')->insert([
+            'p_name' => 'Laptop HP Pavilion 15 eg2081TU i5 1240P/16GB/512GB/Win11 (7C0Q4PA) ',
+            'cate_id' => 2,
+            'p_price_old' => 20990000,
+            'p_price_new' => 18190000,
+            'p_description' => 'Khả năng đáp ứng hiệu quả và mượt mà mọi tác vụ làm việc và giải trí nhờ sức mạnh của chip Intel Gen 12 cùng RAM 16 GB, laptop HP Pavilion 15 eg2081TU i5 1240P (7C0Q4PA) chắc chắn sẽ rất phù hợp với những bạn sinh viên, học sinh cũng như người đi làm.
+            • Laptop sử dụng chip Intel Core i5 1240P có tốc độ ép xung cao 4.4 GHz kết hợp cùng card Intel Iris Xe Graphics cho hiệu năng vượt trội để thực hiện mượt mà mọi tác vụ soạn thảo văn bản và làm việc trên Word, Excel,... hay xem phim giải trí. Bạn còn có thể tạo ra các ấn phẩm 2D, chỉnh sửa video ngắn, hình ảnh cũng như chơi các tựa game thịnh hành nhờ khả năng xử lý đồ họa nâng cao đến từ GPU.
+
+            • Bộ nhớ RAM 16 GB có hỗ trợ nâng cấp tối đa lên đến 32 GB cho người dùng khả năng đa nhiệm nhanh chóng, chuyển qua lại giữa các tab làm việc một cách trơn tru, vận hành nhiều tác vụ mà không bị đơ hay giật lag.
+
+            • Laptop HP với ổ cứng SSD NVMe PCIe hỗ trợ truy xuất và khởi động các ứng dụng nhanh hơn đáng kể so với những ổ HDD thông thường, đồng thời dung lượng 512 GB cũng mang đến không gian lưu trữ thoải mái cho tệp tin và tài liệu của bạn.
+
+            • Màn hình kích thước 15.6 inch có công nghệ BrightView cùng độ phân giải Full HD (1920 x 1080) đem lại không gian trải nghiệm nội dung bao quát, khung hình rõ nét cùng màu sắc tươi tắn cho những trải nghiệm xem phim hay làm việc của bạn.
+
+            • Công nghệ Realtek High Definition Audio mang đến chất âm sống động và được khuếch đại với tần số cao, đắm chìm bạn vào những trải nghiệm phim ảnh, âm nhạc tuyệt vời.
+
+            • Máy được thiết kế với kiểu dáng thanh lịch và tinh tế, vỏ máy bằng nhựa và chiếu nghỉ tay được chế tác với kim loại cũng mang đến tính bền bỉ, chắc chắn nhất định trong quá trình sử dụng. Ngoài ra, khối lượng tổng thể 1.72 kg vẫn rất dễ dàng cho người dùng có thể mang theo laptop mọi lúc, mọi nơi.
+
+            • Chiếc laptop học tập - văn phòng này còn có HD Webcam giúp người dùng có thể nhanh chóng tham gia các hoạt động trực tuyến mà không phải kết nối thêm với thiết bị bên ngoài.
+
+            • Laptop HP Pavilion với nhiều cổng giao tiếp như: HDMI, Jack tai nghe 3.5 mm, USB 3.2 và USB Type-C giúp kết nối thuận lợi với các thiết bị ngoại vi.',
+            'p_color' => '#e6e6e6',
+            'p_type' => 'Laptop',
+            'p_quantity' => 15,
+            'p_photo1' => 'avatars/hp-pavilion-15-eg2081tu-i5-7c0q4pa-1.jpg',
+            'p_photo2' => 'avatars/hp-pavilion-15-eg2081tu-i5-7c0q4pa-2.jpg',
+            'p_photo3' => 'avatars/hp-pavilion-15-eg2081tu-i5-7c0q4pa-3.jpg',
+            'p_photo4' => 'avatars/hp-pavilion-15-eg2081tu-i5-7c0q4pa-4.jpg',
+            'p_photo5' => 'avatars/hp-pavilion-15-eg2081tu-i5-7c0q4pa-5.jpg',
+        ]);
+
+        //11
+        DB::table('products')->insert([
+            'p_name' => 'Laptop Asus TUF Gaming A15 FA506NF R5 7535HS/16GB/512GB/4GB RTX2050/144Hz/Win11 (HN012W)',
+            'cate_id' => 2,
+            'p_price_old' => 20990000,
+            'p_price_new' => 17490000,
+            'p_description' => 'Một mẫu laptop chiến game đến từ thương hiệu Asus vừa được lên kệ tại Thế Giới Di Động, sở hữu những thông số cấu hình vượt trội với AMD Ryzen 5 dòng HS mạnh mẽ, card rời RTX 2050 và có một mức giá cân đối. Laptop Asus TUF Gaming A15 FA506NF R5 7535HS (HN012W) chắc chắn sẽ là công cụ tuyệt vời để thoả mãn mọi nhu cầu giải trí của anh em.
+            • Bộ vi xử lý AMD Ryzen 5 7535HS cùng card đồ họa rời NVIDIA GeForce RTX 2050 4 GB cung cấp một hiệu năng xử lý mạnh mẽ, thừa sức để chỉnh sửa hình ảnh, render video chuyên nghiệp trên Photoshop, AI,... đồng thời chiến các tựa game hot ở mức cấu hình Medium đến High.
+
+            • Laptop Asus với bộ nhớ RAM 16 GB chuẩn DDR5 cho phép người dùng đa nhiệm trơn tru, chạy các trò chơi hay phần mềm đồ họa nặng mà không gặp hiện tượng giật lag. Máy có khả năng nâng cấp RAM lên đến 32 GB, giúp cho hệ thống nâng cao hiệu suất, đáp ứng mượt mà cho nhu cầu sử dụng cao hơn.
+
+            • Ổ cứng SSD 512 GB NVMe PCIe 4.0 không chỉ có tốc độ truy xuất dữ liệu cao, giúp tối ưu khởi động máy mà còn cho phép người dùng lưu trữ nhiều ứng dụng, dữ liệu và trò chơi.
+
+            • Màn hình laptop 15.6 inch được phủ tấm nền IPS độ phân giải Full HD (1920 x 1080) có khả năng tái tạo màu tốt, hình ảnh hiển thị sắc nét cùng góc nhìn bao quát và đều màu lên đến 178 độ. Công nghệ Anti Glare hỗ trợ chống chói, lóa mờ trên màn hình khi bạn sử dụng ở nơi có cường độ ánh sáng mạnh.
+
+            • Tần số quét 144 Hz tích hợp công nghệ làm mới Adaptive-Sync giúp loại bỏ những vấn đề như giật, xé ảnh cũng như có độ trễ hình thấp mang lại cho bạn trải nghiệm giải trí tuyệt vời, thích hợp với những game có tiết tấu và tốc độ chuyển cảnh nhanh.
+
+            • Một số những thông số về màu sắc cơ bản như 62.5% sRGB, 47.34% Adobe RGB và 45% NTSC cũng đáp ứng được những điều kiện tối thiểu về màu sắc, để bạn có thể thoải mái tinh chỉnh đồ hoạ một cách bán chuyên.
+
+            • Hệ thống loa đạt chuẩn Hi-Res có khả năng tái tạo chất âm 3D từ nhiều hướng nhờ tích hợp với công nghệ DTS Audio cung cấp chất âm sống động, tách biệt rõ từng sắc âm trầm bổng, hỗ trợ bạn cảm nhận rõ hơn từng giai điệu bài hát, những thước phim hay những trận game kịch tính.
+
+            • Laptop Asus TUF Gaming được chế tác với vỏ nhựa, nắp lưng kim loại cứng cáp, mang những đường nét tinh tế, sẽ thu hút mọi ánh nhìn khi sử dụng máy ở những nơi đông người. Hơn nữa, laptop gaming có đèn chuyển màu RGB - 1 vùng, định hình cá tính với đa màu sắc, vừa dễ dàng sử dụng khi thiếu sáng, vừa mang đến sự hứng khởi khi sử dụng.
+
+            • Hệ thống tản nhiệt thông dụng với quạt Arc Flow 84 cánh, đảm bảo được lượng nhiệt ở mức ổn định kể cả khi bạn thực hiện những công việc hiệu suất cao như stream game hay làm đồ hoạ, không bị nâng hay tụt hiệu năng trong quá trình sử dụng.
+
+            • Laptop gaming có đầy đủ các cổng giao tiếp đáp ứng mọi nhu cầu kết nối: HDMI, Jack 3.5 mm, USB 3.2, USB Type-C,...',
+            'p_color' => '#000',
+            'p_type' => 'Laptop',
+            'p_quantity' => 15,
+            'p_photo1' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-2.jpg',
+            'p_photo2' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-1.jpg',
+            'p_photo3' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-3.jpg',
+            'p_photo4' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-4.jpg',
+            'p_photo5' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-5.jpg',
         ]);
     }
 }

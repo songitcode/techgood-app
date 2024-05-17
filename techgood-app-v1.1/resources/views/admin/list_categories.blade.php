@@ -5,7 +5,7 @@
         $categories = DB::table('category')->get();
     @endphp
     <div class="container mt-5">
-        <a href="{{ route('admin.add_category') }}" class="btn btn-success float-right">Thêm danh mục</a>
+        <a href="{{ route('admin.add_category') }}" class="btn btn-success float-right mb-3">Thêm danh mục</a>
         <table class="border table">
             <tr>
                 <th>ID</th>

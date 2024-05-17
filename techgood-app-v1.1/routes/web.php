@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,9 +66,15 @@ Route::get('admin/edit-category/{cate_id}', [CategoryController::class, 'editCat
 Route::get('admin-delete-category/{cate_id}', [CategoryController::class, 'deleteCategory'])->name('delete_category');
 Route::post('admin/update-category/{cate_id}', [CategoryController::class, 'updateCategory'])->name('admin.update_category');
 
-
+// Add to cart
+Route::post('/add-to-cart/{product_id}', [CartController::class, 'addToCart'])->name('add_to_cart');
+// Route::get('show-cart', [CartController::class, 'showCart'])->name('show_cart');
 
 Route::get('products/category/{categoryId}', [AuthController::class, 'showProductsByCategory'])->name('products.by_category');
+
+Route::get('remove-cart/{cart_id}', [CartController::class, 'remove'])->name('remove_cart');
+
+Route::get('/search', [AuthController::class, 'search'])->name('product.search');
 
 // Route::get('chi-tiet-san-pham/{product_id}', [AuthController::class, 'sanPhamTuongTu'])->name('product.sanphamtuongtu');
 // Auth

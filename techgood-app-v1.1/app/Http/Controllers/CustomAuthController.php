@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Products;
+use App\Models\Cart;
+use Auth;
 
 class CustomAuthController extends Controller
 {
@@ -24,14 +26,26 @@ class CustomAuthController extends Controller
     public function productsPage()
     {
         // return view("auth.product_list");
-        $products = Products::all();
-        return view('auth.product_list', ['products' => $products]);
+        // $products = Products::all();
+        // return view('auth.product_list', ['products' => $products]);
+
+        $products = Products::paginate(5); // Phân trang với mỗi trang có tối đa 10 sản phẩm
+        return view('auth.product_list', compact('products'));
     }
 
     // cart product page
     public function productCartPage()
     {
-        return view("auth.product_cart");
+        // Lấy danh sách sản phẩm trong giỏ hàng của người dùng hiện tại
+        $cartItems = Cart::where('user_id', Auth::id())->with('products')->get();
+
+        if (!$cartItems) {
+            return view('auth.emty_cart');
+        }
+        return view('auth.product_cart', compact('cartItems'));
+
+        // Nếu giỏ hàng có sản phẩm, hiển thị trang giỏ hàng với danh sách sản phẩm
+        // return view('auth.product_cart', compact('cart'));
     }
 
     // abate(thanh toan) page

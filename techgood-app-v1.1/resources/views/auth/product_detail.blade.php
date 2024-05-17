@@ -8,7 +8,7 @@
         <p>Chi tiết sản phẩm - {{ $products->p_type }}</p>
     </div>
     <section class="box-details">
-        <form action="#" class="form-details">
+        <form action="{{ route('add_to_cart', ['product_id' => $products->product_id]) }}" method="POST" class="form-details">
             @csrf
             <div class="img-details">
                 <div class="box-imgs">
@@ -73,45 +73,31 @@
                     <ul class="technical-content">
                         <li class="item-content">
                             <p class="items">CPU</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">WIFI</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">Modem</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">Hardware</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">LAN</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">---</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                         <li class="item-content">
                             <p class="items">---</p>
-                            <div class="info-tech">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                                quisquam molestiae
-                                commodi tempora tenetur agendi doloribus.</div>
+                            <div class="info-tech">Cập nhật . . .</div>
                         </li>
                     </ul>
                 </div>
@@ -123,27 +109,33 @@
                         <div class="thong-bao">Không có sản phẩm tương tự nào cả</div>
                     @else
                         @foreach ($similarProducts as $similarProduct)
-                            <div class="card-product">
-                                <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}">
-                                    <img src="{{ asset($similarProduct->p_photo1) }}" class="img-product" alt="..."
-                                        width="100%" height="230">
-                                </a>
-                                <div class="s-info-product">
-                                    <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}"
-                                        class="s-link-name">
-                                        <div class="s-name-product">{{ $similarProduct->p_name }}</div>
+                            <form action="{{ route('add_to_cart', ['product_id' => $similarProduct->product_id]) }}"
+                                method="POST">
+                                @csrf
+                                <div class="card-product">
+                                    <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}">
+                                        <div>
+                                            <img src="{{ asset($similarProduct->p_photo1) }}" class="img-product"
+                                                alt="..." width="100%" height="230">
+                                        </div>
                                     </a>
-                                    <div class="s-box-price">
-                                        <span
-                                            class="price-old">{{ number_format($similarProduct->p_price_old, 0, ',', '.') }}
-                                            đ</span>
-                                        <span
-                                            class="price-new">{{ number_format($similarProduct->p_price_new, 0, ',', '.') }}
-                                            đ</span>
+                                    <div class="s-info-product">
+                                        <a href="{{ route('product_detail', ['product_id' => $similarProduct->product_id]) }}"
+                                            class="s-link-name">
+                                            <div class="s-name-product">{{ $similarProduct->p_name }}</div>
+                                        </a>
+                                        <div class="s-box-price">
+                                            <span
+                                                class="price-old">{{ number_format($similarProduct->p_price_old, 0, ',', '.') }}
+                                                đ</span>
+                                            <span
+                                                class="price-new">{{ number_format($similarProduct->p_price_new, 0, ',', '.') }}
+                                                đ</span>
+                                        </div>
                                     </div>
+                                    <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
                                 </div>
-                                <button type="submit" class="btn-addtocart">Thêm vào giỏ</button>
-                            </div>
+                            </form>
                         @endforeach
                     @endif
 
