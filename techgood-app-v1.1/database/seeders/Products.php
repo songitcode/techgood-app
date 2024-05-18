@@ -359,6 +359,334 @@ class Products extends Seeder
             'p_photo4' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-4.jpg',
             'p_photo5' => 'avatars/asus-tuf-gaming-a15-fa506nf-r5-hn012w-glr-5.jpg',
         ]);
+
+        //12
+        DB::table('products')->insert([
+            'p_name' => 'Đồng hồ thông minh BeFit WatchFit 46.7mm',
+            'cate_id' => 7,
+            'p_price_old' => 890000,
+            'p_price_new' => 490000,
+            'p_description' => 'BeFit WatchFit được trang bị các chức năng sức khỏe và thể thao cơ bản, đáp ứng được nhu cầu sử dụng của người dùng phổ thông. Tuy thuộc phân khúc giá rẻ nhưng chiếc đồng hồ thông minh này vẫn được trang bị tính năng nghe gọi, đảm bảo sự thuận tiện trong quá trình sử dụng.
+            Phong cách hiện đại, kiểu dáng nhỏ gọn
+            Về mặt thiết kế BeFit WatchFit sẽ có vài điểm khác biệt so với những mẫu smartwatch cùng hãng. Sở hữu mặt đồng hồ hình chữ nhật có kích thước 46.7 mm, các góc được bo cong mềm mại nên đối với những ai có cổ tay nhỏ như mình khi đeo cũng không bị thô. Bên cạnh phải của mặt đồng hồ có một nút bấm, khi mình thao tác thì thấy độ nảy khá tốt.
+
+            BeFit WatchFit - Kiểu dáng hiện đại
+
+            Tuy nhiên, có một điểm mình chưa ưng lắm ở chiếc đồng hồ thông minh này là phần viền khá dày ở cả 4 cạnh. Dù vậy thì mình vẫn có thể sử dụng những tấm ảnh nền đen để tạo cảm giác liền mạch giữa màn hình và viền, tăng tính thẩm mỹ khi nhìn vào.
+
+            Đồng hồ được trang bị dây silicone vô cùng mềm mịn, dù mình đeo trên tay cả ngày dài cũng không bị hằn hay ngứa, rất thích hợp với những ai thường ra nhiều mồ hôi. Khối lượng của đồng hồ chỉ 35.5 g, theo cảm nhận của mình là khá nhẹ nên những lúc mình nhảy dây cũng không cảm thấy mỏi tay.
+
+            BeFit WatchFit - Gọn nhẹ theo cổ tay
+
+            Đồng hồ thông minh được trang bị màn hình cảm ứng thuận tiện trong các thao tác điều khiển. Kích thước 1.57 inch tuy không quá lớn nhưng vẫn đủ để hiển thị. Màn hình có độ phân giải 200 x 320 Pixels mang đến những nội dung rõ nét, tấm nền IPS cho màu sắc chân thật và góc nhìn rộng. Những lúc mình sử dụng ở ngoài trời thì màn hình sẽ có bóng gương nhẹ nhưng nội dung hiển thị khá tốt.
+
+            BeFit WatchFit - Hiển thị nội dung rõ nét
+
+            BeFit WatchFit không có tính năng màn hình luôn hiển thị (Always on Display) nhưng được trang bị tính năng nâng cổ tay sáng màn hình cũng rất tiện lợi khi dùng và tiết kiệm năng lượng. Trong quá trình mình sử dụng thì chưa thấy tình trạng bị trễ khi nâng cổ tay lên để xem giờ.
+
+            BeFit WatchFit - Màn hình luôn hiển thị (Always On Display)
+
+            Hỗ trợ chăm sóc sức khỏe tốt hơn
+            Đồng hồ thông minh BeFit được trang bị cảm biến đo nhịp tim với tốc độ nhanh chóng, tương đối chính xác. Đồng thời, thiết bị còn được hỗ trợ một số chức năng sức khỏe thông dụng như: Đo huyết áp, theo dõi giấc ngủ, đo nồng độ oxy trong máu (SpO2),... giúp người dùng theo dõi sự thay đổi của cơ thể một cách tốt hơn.
+
+            BeFit WatchFit - Đa dạng chức năng sức khỏe
+
+            Mình đã trải nghiệm tính năng theo dõi giấc ngủ trên đồng hồ rất nhiều lần và kết quả nhận được so với thực tế thì có độ chính xác cao. Đồng hồ đo được thời gian đi ngủ, thời gian thức dậy, giai đoạn ngủ sâu và ngủ nông giúp mình hiểu rõ hơn về tình trạng giấc ngủ từ đó tiến hành điều chỉnh cho phù hợp hơn.
+
+            BeFit WatchFit - Theo dõi giấc ngủ
+
+            Bên cạnh đó, mình cũng đã tiến hành đo SpO2 và nhịp tim bằng BeFit WatchFit và so sánh với máy đo y tế cầm tay. Kết quả giữa hai thiết bị có sai số nhưng không quá lớn, nên mình vẫn có thể tham khảo những chỉ số này để thiết lập chế độ ăn uống, nghỉ ngơi cho phù hợp với cơ thể.
+
+            BeFit WatchFit - Đo nhịp tim và SpO2
+
+            Tính năng đếm bước chân trên thiết bị này mình cũng đã trải nghiệm, về độ chính xác thì chỉ ở mức tương đối. Mình đã bật chế độ đi bộ để đếm bước chân và đi được 100 bước nhưng đồng hồ chỉ ghi nhận được 85 bước. Lúc mình chạy xe máy cũng có thử bật đếm bước chân, sau khoảng 6 km mình có dừng lại kiểm tra thì thấy đồng hồ đã ghi nhận 12 bước chân. Có thể thấy tính năng này hoạt động chưa thật sự ổn định.
+
+            BeFit WatchFit - Tính năng đếm bước chân
+
+            Đồng hồ thông minh BeFit được trang bị những môn thể thao cơ bản như: Đi bộ, bóng rổ, cầu lông, chạy bộ, leo núi, đạp xe, bóng đá,... đáp ứng nhu cầu rèn luyện cơ bản của mọi người, cho người dùng thoải mái lựa chọn dựa vào sở thích và mục đích tập luyện. Khi mình tập luyện đồng hồ sẽ đo lường các chỉ số cơ thể, kết quả của buổi tập để thuận tiện cho việc đánh giá và đưa ra kế hoạch rèn luyện thích hợp.
+
+            BeFit WatchFit - Đa dạng chế độ thể thao
+
+            Có thể nhận cuộc gọi ngay trên đồng hồ
+            Trước tiên mình cần tải ứng dụng FitCloudPro để đồng bộ dữ liệu giữa điện thoại và đồng hồ. Theo như trải nghiệm của mình thì khả năng liên kết của hai thiết bị khá tốt, tin nhắn, thông báo và cuộc gọi được hiển thị một cách nhanh chóng.
+
+            Tải ứng dụng FitCloudPro tại: CH Play | App Store
+
+            Khi kết nối với điện thoại iOS những cuộc gọi thông thường hay từ ứng dụng mình đều có thể nhận hoặc từ chối bằng đồng hồ. Tuy nhiên, phần tên liên hệ sẽ không được hiển thị dù mình đã lưu trong danh bạ.
+
+            BeFit WatchFit - Cuộc gọi khi kết nối iOS
+
+            Còn khi liên kết với điện thoại Android những cuộc gọi quay số thông thường mình có thể nhận hoặc từ chối trực tiếp trên đồng hồ. Đối với những cuộc gọi từ ứng dụng như: Zalo, Line, Messenger,... thì đồng hồ chỉ có thể từ chối chứ không nhận được.
+
+            ',
+            'p_color' => '#000',
+            'p_type' => 'Dong Ho',
+            'p_quantity' => 15,
+            'p_photo1' => 'avatars/befit-watch-fit-hong-1-2.jpg',
+            'p_photo2' => 'avatars/befit-watch-fit-hong-2-2.jpg',
+            'p_photo3' => 'avatars/befit-watch-fit-hong-3-2.jpg',
+            'p_photo4' => 'avatars/befit-watch-fit-hong-4.jpg',
+            'p_photo5' => 'avatars/befit-watch-fit-hong-5.jpg',
+        ]);
+
+        //13
+        DB::table('products')->insert([
+            'p_name' => 'Đồng hồ Casio 34 mm Nam MTP-M305D-1AVDF ',
+            'cate_id' => 7,
+            'p_price_old' => 3767000,
+            'p_price_new' => 2636000,
+            'p_description' => '• Đồng hồ Casio 34 mm Nam MTP-M305D-1AVDF là một sản phẩm đáng chú ý từ thương hiệu nổi tiếng Casio của Nhật Bản. Với điểm nhấn là hình ảnh mặt trăng tinh xảo được chế tác tại vị trí 6 giờ, sản phẩm mang đến vẻ đẹp cảm hứng và tinh tế. Đây không chỉ là một phụ kiện hoàn hảo cho công việc và vui chơi, mà còn thể hiện sự thanh lịch hiện đại cho các quý ông.
+
+            • Đồng hồ Casio này có thiết kế hiện đại hơn, khác biệt với mặt số hình chữ nhật ấn tượng, giúp giảm đi sự thường thấy của mặt tròn và thêm phần thanh lịch và sang trọng khi đeo. Điều này đem lại sự mới mẻ cho những quý ông muốn thử điểm mới cho phong cách của mình.
+
+            • Chất liệu dây đeo và khung viền của sản phẩm này được làm từ thép không gỉ cứng cáp, bền bỉ với thời gian. Chất liệu này giúp đồng hồ dễ dàng lau chùi, luôn giữ được vẻ sáng bóng giúp bạn nam có thể đeo thường xuyên.
+
+            • Đồng hồ nam này có kích thước phù hợp với cổ tay mảnh khảnh, đường kính 34 mm. Mặt kính của sản phẩm được làm bằng kính khoáng (Mineral) với độ cứng và khả năng chống va đập tốt, cho phép quan sát mặt đồng hồ dễ dàng.
+
+            • Đồng hồ này còn có khả năng chống nước đến độ sâu 5 ATM, phù hợp với các hoạt động hàng ngày như đi mưa, rửa tay hay đi tắm, nhưng không nên sử dụng khi bơi.
+
+            • Đặc biệt, đồng hồ nam này trang bị tính năng hiển thị lịch thứ và lịch ngày trên mặt số, tính năng lịch tuần trăng giúp bạn dễ dàng theo dõi thời gian. Nhờ tính năng này, đồng hồ không chỉ là một phụ kiện thời trang mà còn hữu ích trong việc quản lý thời gian và lịch trình.',
+            'p_color' => 'e6e6e6e6',
+            'p_type' => 'Dong Ho',
+            'p_quantity' => 10,
+            'p_photo1' => 'avatars/casio-mtp-m305d-1avdf-nam-1.jpg',
+            'p_photo2' => 'avatars/casio-mtp-m305d-1avdf-nam-2.jpg',
+            'p_photo3' => 'avatars/casio-mtp-m305d-1avdf-nam-3.jpg',
+            'p_photo4' => 'avatars/casio-mtp-m305d-1avdf-nam-4.jpg',
+            'p_photo5' => 'avatars/casio-mtp-m305d-1avdf-nam-5.jpg',
+        ]);
+
+        //14
+        DB::table('products')->insert([
+            'p_name' => 'Đồng hồ Citizen Sunshine and Luna 40 mm Nam NH9130-84L',
+            'cate_id' => 7,
+            'p_price_old' => 10085000,
+            'p_price_new' => 8068000,
+            'p_description' => '• Đồng hồ Citizen - một hãng đồng hồ nổi tiếng từ Nhật Bản không chỉ là một biểu tượng thời gian, mà sản phẩm ở đây còn là biểu tượng của sự tinh tế, đẳng cấp và sự chăm sóc tỉ mỉ trong từng chi tiết, là người bạn đồng hành đáng tin cậy trong cuộc sống hàng ngày của người tiêu dùng.
+
+            • Đồng hồ Citizen Sunshine and Luna 40 mm Nam NH9130-84L được đánh giá cao nhờ thiết kế lộ tim tinh tế và độc đáo ở vị trí 6 giờ, tạo nên sự thu hút. Phần lộ tim được trang trí bằng họa tiết đường vân, tạo cảm giác như những tia sáng mặt trời, mang ý nghĩa về năng lượng tích cực và lạc quan. Khi được ánh sáng chiếu vào các vân họa tiết được lộ rõ hơn đúng với tinh thần của bộ sưu tập Sunshine and Luna (mặt trăng, mặt trời) mang lại.
+
+            • Đồng hồ nam này có đường kính 40 mm phù hợp với các bạn nam có cổ tay trung bình. Các chàng trai có thể đeo sản phẩm thường xuyên mà không cần phải lo lắng về những trầy xước thông thường vì mặt kính của chiếc đồng hồ này được làm từ kính Sapphire.
+
+            • Người dùng có thể yên tâm đeo mẫu đồng hồ trong các sinh hoạt hằng ngày như rửa tay, đi mưa hay đi tắm nhờ hệ số kháng nước lên đến 5 ATM. Lưu ý: không đeo khi đi bơi hay lặn.
+
+            • Khung viền được chế tạo từ thép không gỉ sáng bóng cùng khả năng chống chịu va đập cũng như hạn chế ăn mòn khá tốt giúp người dùng có thể yên tâm khi sử dụng. Đặc biệt, dây đeo của sản phẩm được sử dụng chất liệu là thép không gỉ 316L giúp tăng độ bóng bẩy và độ bền lên 2 đến 3 lần so với các mẫu đồng hồ thông thường.',
+            'p_color' => 'e6e6e6e6',
+            'p_type' => 'Dong Ho',
+            'p_quantity' => 10,
+            'p_photo1' => 'avatars/dong-ho-citizen-40-mm-nam-nh9130-84l-1.jpg',
+            'p_photo2' => 'avatars/dong-ho-citizen-40-mm-nam-nh9130-84l-2.jpg',
+            'p_photo3' => 'avatars/dong-ho-citizen-40-mm-nam-nh9130-84l-3.jpg',
+            'p_photo4' => 'avatars/dong-ho-citizen-40-mm-nam-nh9130-84l-4.jpg',
+            'p_photo5' => 'avatars/dong-ho-citizen-40-mm-nam-nh9130-84l-5.jpg',
+        ]);
+
+        //14
+        DB::table('products')->insert([
+            'p_name' => 'Smart Tivi Samsung 4K 65 inch UA65AU7002',
+            'cate_id' => 9,
+            'p_price_old' => 13900000,
+            'p_price_new' => 10990000,
+            'p_description' => 'Smart Tivi Samsung 4K 65 inch UA65AU7002 mang đến trải nghiệm xem ấn tượng với màn hình 65 inch, tái tạo hình ảnh 4K chân thực cùng độ phân giải 4K, bộ xử lý Crystal 4K, màu sắc rực rỡ với công nghệ PurColor, âm thanh mạnh mẽ, sống động với công nghệ Q-Symphony, Adaptive Sound, hệ điều hành Tizen™ với kho ứng dụng phong phú, dễ sử dụng.
+
+            Tổng quan thiết kế
+            - Smart Tivi Samsung 4K 65 inch UA65AU7002 tỏa sáng trong mọi căn phòng với thiết kế màn hình phẳng tinh giản, sang trọng, giúp tôn lên gu thẩm mỹ đẳng cấp của mọi gia chủ.
+
+            - Kích thước màn hình 65 inch, lý tưởng để bố trí trong các căn phòng khách, phòng ngủ, văn phòng làm việc có diện tích vừa và lớn.
+
+            - Có chân đế dạng chữ V úp ngược nâng tivi Samsung vững vàng khi lắp đặt kiểu để bàn. Nếu muốn tăng không gian trống trong phòng, bạn có thể loại bỏ chân đế và lắp kiểu treo tường.
+
+            Smart Tivi Samsung 4K 65 inch UA65AU7002 - Tổng quan thiết kế
+
+            *Hình ảnh chỉ mang tính chất minh họa sản phẩm
+
+            Công nghệ hình ảnh
+            - Độ phân giải 4K với 3.840 x 2.160 điểm ảnh cho hình ảnh rõ nét gấp 4 lần độ phân giải Full HD.
+
+            - Bộ xử lý Crystal 4K có khả năng điều chỉnh màu sắc, tối ưu tỷ lệ tương phản và dải màu động một cách tự động để hình ảnh hiển thị đẹp mắt, sắc nét.
+
+            - Công nghệ HDR10+ cải tiến độ sáng hiển thị khung hình chi tiết, có chiều sâu trong khi không làm thay đổi các đặc tính gốc của hình.
+
+            - PurColor với hệ màu mở rộng mang đến các thước phim với màu sắc rực rỡ, sinh động, xem nịnh mắt.
+
+            - Công nghệ Contrast Enhancer tăng độ tương phản, bao phủ lên màn hình nhiều lớp sáng tối cho mỗi vật thể, khu vực trong hình ảnh đều trở nên chân thực, chi tiết.
+
+            - Motion Xcelerator tự động thêm khung hình vào nội dung ban đầu để các hành động trở nên rõ ràng, game thủ chơi game mượt mà, tận hưởng giải trí với các tựa game yêu thích thỏa mãn hơn.
+
+            Mời bạn xem thêm: Những độ phân giải màn hình phổ biến hiện nay trên tivi
+
+            Smart Tivi Samsung 4K 65 inch UA65AU7002 - Công nghệ hình ảnh
+
+            *Hình ảnh chỉ mang tính chất minh họa sản phẩm
+
+            Công nghệ âm thanh
+            - Công nghệ Adaptive Sound tối ưu âm thanh theo từng thể loại nội dung mà tivi đang phát, theo môi trường bạn đang xem để người nghe được trải nghiệm chất lượng âm thanh tốt nhất.
+
+            - Công nghệ Q-Symphony liên kết loa của Smart tivi với loa thanh kiến tạo không gian giải trí bùng nổ với âm thanh vang dội, sinh động.
+
+            Smart Tivi Samsung 4K 65 inch UA65AU7002 - Công nghệ âm thanh
+
+            *Hình ảnh chỉ mang tính chất minh họa sản phẩm
+
+            Hệ điều hành
+            - Smart tivi Samsung thiết lập hệ điều hành Tizen™ có giao diện màn hình chính trực quan, bạn dễ dàng tìm kiếm, tùy chọn các chức năng, ứng dụng phù hợp với nhu cầu của mình.
+
+            - Có nhiều ứng dụng phổ biến như YouTube, FPT Play, Galaxy Play (Fim+), Clip TV, Netflix, MyTV, POPS Kids, Spotify,... bạn còn có thể tải thêm nhiều ứng dụng hữu ích khác cho mình trong kho ứng dụng phong phú của hệ điều hành.',
+            'p_color' => '#000',
+            'p_type' => 'Television',
+            'p_quantity' => 5,
+            'p_photo1' => 'avatars/untitled-1.jpg',
+            'p_photo2' => 'avatars/untitled-2.jpg',
+            'p_photo3' => 'avatars/untitled-3.jpg',
+            'p_photo4' => 'avatars/untitled-4.jpg',
+            'p_photo5' => 'avatars/untitled-5.jpg',
+        ]);
+
+
+        //15
+        DB::table('products')->insert([
+            'p_name' => 'Smart Tivi Toshiba 4K 55 inch 55E330MP',
+            'cate_id' => 9,
+            'p_price_old' => 11990000,
+            'p_price_new' => 9490000,
+            'p_description' => 'Smart Tivi Toshiba 4K 55 inch 55E330MP thiết kế tối giản, sang trọng với màn hình 55 inch, bộ xử lý Regza Engine ZR tối ưu chất lượng hình ảnh, công nghệ Ultra Essential PQ tái tạo khung hình chân thật, công nghệ Dolby Vision IQ đảm bảo cảnh quay hiển thị đúng như ý tưởng của nhà làm phim, công nghệ Dolby Atmos đem đến âm thanh vòm sống động như ở rạp hát, tìm kiếm bằng giọng nói qua ứng dụng VIDAA dễ dàng.
+
+            Tổng quan thiết kế
+            - Toshiba 55E330MP với đường nét tinh tế, đường viền mỏng ôm trọn các cạnh của màn hình 55 inch, hòa nhập vào không gian nội thất hiện đại của căn phòng khách, phòng ngủ, phòng họp có diện tích vừa và rộng của gia đình, công ty.
+
+            - Chất liệu kim loại mang đến độ bền chắc cao cho chân đế chữ V úp ngược giúp bạn yên tâm lắp đặt tivi kiểu để bàn, không sợ thiết bị nghiêng, đổ. Nếu tháo chân đế ra, người dùng có thể bố trí kiểu treo tường cho không gian phòng thêm rộng thoáng hơn.
+
+            Smart Tivi Toshiba 4K 55 inch 55E330MP - Tổng quan thiết kế
+
+            *Hình ảnh chỉ mang tính chất minh hoạ
+
+            Công nghệ hình ảnh
+            - Màn hình độ phân giải 4K tái hiện hình ảnh sắc nét gấp 4 lần so với Full HD.
+
+            - Bộ xử lý Regza Engine ZR cho hiệu quả xử lý tối ưu mang đến khung hình có chất lượng cao. Công nghệ AI 4K Upscaling chọn lọc các màu sắc của những điểm ảnh ở lân cận, sử dụng thuật toán phân tích kết cấu của nội dung gốc, nâng cấp hình ảnh nguồn vào từ Full HD lên gần chuẩn 4K sống động.
+
+            - Công nghệ Ultra Essential PQ phân tích mỗi điểm ảnh trên từng khung hình từ đó điều chỉnh một cách tự động, tìm ra các chi tiết điểm ảnh tối ưu, tái tạo, nâng cấp để khung hình có chất lượng tuyệt vời.
+
+            Mời bạn xem thêm: Những độ phân giải màn hình phổ biến hiện nay trên tivi
+
+            Smart Tivi Toshiba 4K 55 inch 55E330MP - Công nghệ Ultra Essential PQ
+
+            *Hình ảnh chỉ mang tính chất minh hoạ
+
+            - Dolby Vision IQ tinh chỉnh hình ảnh dựa vào các cấp độ ánh sáng trong môi trường xung quanh sao cho hình ảnh được truyền tải theo như ý tưởng của nhà sáng tạo nội dung mong muốn.
+
+            - Công nghệ AI Picture Optimizer với trí tuệ nhân tạo Al, tivi sẽ phân tích, tinh chỉnh khung hình chính xác, chọn ra chế độ xem thích hợp cho từng nội dung để hiển thị màu sắc, chất lượng hình ảnh tương thích với từng khung hình.
+
+            - Color Re-Master, công nghệ phục hồi màu sắc vốn có của hình ảnh gốc đầy đủ để tạo nên các cảnh quay có màu sắc tự nhiên, đẹp như bước ra từ đời thực.
+
+            Smart Tivi Toshiba 4K 55 inch 55E330MP - Color Re-Master
+
+            *Hình ảnh chỉ mang tính chất minh hoạ
+
+            - Công nghệ Auto Clean tự động phân tích chuyển động, độ sáng, loại bỏ hiệu ứng nhiễu để thước phim hiển thị rõ ràng, sáng đẹp hơn.
+
+            - Các công nghệ Super Contrast Booster, HDR10+, HLG nâng cao độ tương phản, độ sáng, tăng độ sâu cho từng khung hình thêm chi tiết, chân thật.
+
+            - Mẫu Smart tivi này hỗ trợ đồng bộ khung hình/tần số quét chơi game VRR, có tính năng giảm nhiễu đầu vào Auto Low Latency Mode (ALLM) cho bạn chiến game mượt mà, phản hồi tức thì, giành chiến thắng trong tầm tay. ',
+            'p_color' => '#000',
+            'p_type' => 'Television',
+            'p_quantity' => 5,
+            'p_photo1' => 'avatars/smart-tivi-toshiba-4k-55-inch-55e330mp-01.jpg',
+            'p_photo2' => 'avatars/smart-tivi-toshiba-4k-55-inch-55e330mp-02.jpg',
+            'p_photo3' => 'avatars/smart-tivi-toshiba-4k-55-inch-55e330mp-03.jpg',
+            'p_photo4' => 'avatars/smart-tivi-toshiba-4k-55-inch-55e330mp-04.jpg',
+            'p_photo5' => 'avatars/smart-tivi-toshiba-4k-55-inch-55e330mp-05.jpg',
+        ]);
+
+        //16
+        DB::table('products')->insert([
+            'p_name' => 'Smart Tivi Toshiba 4K 55 inch 55E330MP',
+            'cate_id' => 9,
+            'p_price_old' => 19900000,
+            'p_price_new' => 12490000,
+            'p_description' => 'Smart Tivi LG 4K 55 inch 55UQ8000PSC tinh giản trong thiết kế thanh mảnh, sang đẹp, mang khung hình 4K rực rỡ, tương phản cao ấn tượng hòa mình vào không gian nội thất hiện đại, cùng chất âm sống động tinh chỉnh qua AI Sound và AI Acoustic Tuning cho người dùng trải nghiệm đầy lý thú trên từng ứng dụng giải trí từ webOS 22.
+
+            Tổng quan thiết kế
+            - Smart Tivi LG 4K 55 inch 55UQ8000PSC sở hữu kích thước màn hình 55 inch thích hợp dùng cho các phòng có diện tích trung bình như phòng khách gia đình, phòng họp, sảnh nhỏ,...
+
+            - Thiết kế tinh tế, thanh mảnh với các cạnh viền siêu mỏng, tinh giản mà sang trọng, phá vỡ giới hạn tầm nhìn trên khung hình trình chiếu.
+
+            - Tivi có chân đế bằng nhựa lõi kim loại đảm bảo độ bền chắc để nâng đỡ tốt màn hình khi lắp đặt trên kệ tủ, dễ dàng tháo rời chân để bố trí treo tường tiết kiệm không gian.
+
+            Smart Tivi LG 4K 55 inch 55UQ8000PSC - Thiết kế
+
+            *Hình ảnh chỉ mang tính chất minh họa sản phẩm
+
+            Công nghệ hình ảnh
+            - Chất lượng hiển thị sắc nét ấn tượng với độ phân giải 4K (3.840 x 2.160).
+
+            - Bộ xử lý α5 Gen5 AI 4K tối ưu hình ảnh và màu sắc chuẩn xác, chân thực, cùng với khả năng nâng cấp nội dung đầu vào lên chuẩn gần 4K từ công nghệ 4K AI Upscaling cho người xem thưởng thức những khung hình hoàn hảo về độ sắc nét chi tiết.
+
+            - Chất lượng tương phản cũng được gia tăng nhờ công nghệ HDR10 Pro và HDR Dynamic Tone Mapping, độ sáng và độ rõ nét được tối ưu, màn hình xem trở nên rực rỡ hơn, các chi tiết ẩn rõ ràng hơn, đưa người xem hòa mình vào khung cảnh và nội dung đang chiếu.
+
+            - Màn hình game mượt mà nhờ chế độ game HGIG và phản hồi tức thì với công nghệ giảm độ trễ Auto Low Latency Mode (ALLM).
+
+            - Trải nghiệm phim điện ảnh theo đúng mong muốn từ nhà làm phim nhờ chế độ FilmMaker Mode. ',
+            'p_color' => '#000',
+            'p_type' => 'Television',
+            'p_quantity' => 2,
+            'p_photo1' => 'avatars/smart-lg-4k-55-inch-55uq8000psc-01.jpg',
+            'p_photo2' => 'avatars/smart-lg-4k-55-inch-55uq8000psc-02.jpg',
+            'p_photo3' => 'avatars/smart-lg-4k-55-inch-55uq8000psc-03.jpg',
+            'p_photo4' => 'avatars/smart-lg-4k-55-inch-55uq8000psc-04.jpg',
+            'p_photo5' => 'avatars/smart-lg-4k-55-inch-55uq8000psc-05.jpg',
+        ]);
+
+        //17
+        DB::table('products')->insert([
+            'p_name' => 'Bàn Phím Không Dây DareU EK807G ',
+            'cate_id' => 10,
+            'p_price_old' => 670000,
+            'p_price_new' => 510000,
+            'p_description' => 'Bàn Phím Không Dây DareU EK807G có khối lượng nhẹ với kích thước gọn gàng, thiết kế không dây cho phép dùng linh hoạt, để bạn tùy chọn vị trí sử dụng phù hợp nhất cho riêng mình.
+            • Bàn phím không dây gây ấn tượng mạnh với màu đen đẹp mắt, thiết kế tuân thủ chuẩn công thái học, giảm áp lực cho ống cổ tay tạo cảm giác thoải mái khi làm việc trong thời gian dài hơn.
+
+            • Các phím bấm có kích cỡ và khoảng cách hợp lý giúp bạn thao tác nhanh nhẹn, hạn chế tình trạng nhầm lẫn các lệnh, tốc độ phản hồi tốt, nhấn êm.
+
+            • Bàn phím DareU kết nối với laptop, màn hình máy tính, màn hình game,… bằng USB Receiver (đầu thu USB) 2.4 GHz với đường truyền tin cậy, hầu như không bị nhiễu sóng.
+
+            • Là chiếc bàn phím cơ thực thụ, DareU EK807G được lắp hệ thống Blue switch phù hợp với nhiều người sử dụng để chơi game lẫn văn phòng.',
+            'p_color' => '#000',
+            'p_type' => 'Ban Phim',
+            'p_quantity' => 7,
+            'p_photo1' => 'avatars/khong-day-dareu-ek807g-1-1.jpg',
+            'p_photo2' => 'avatars/khong-day-dareu-ek807g-2-1.jpg',
+            'p_photo3' => 'avatars/khong-day-dareu-ek807g-3-1.jpg',
+            'p_photo4' => 'avatars/khong-day-dareu-ek807g-4-1.jpg',
+            'p_photo5' => 'avatars/khong-day-dareu-ek807g-5-1.jpg',
+        ]);
+        //18
+        DB::table('products')->insert([
+            'p_name' => 'Bàn Phím Cơ Có Dây Gaming Rapoo V500alloy ',
+            'cate_id' => 10,
+            'p_price_old' => 550000,
+            'p_price_new' => 390000,
+            'p_description' => 'Bàn phím gaming kiểu Tenkeyless với 87 phím cơ bản độ nhạy cao, bền bỉ
+            Rapoo V500alloy trang bị 87 phím cơ bản đủ đáp ứng mọi nhu cầu trên 1 bàn phím làm việc, chơi game thông thường. Có 2 lựa chọn màu chữ trên keycap cho người dùng: Đỏ hoặc Vàng (giao màu ngẫu nhiên).
+
+            87 phím - Bàn Phím Cơ Có Dây Gaming Rapoo V500alloy Đen
+
+            Hành trình phím tốt với khoảng cách phím rộng, Switch Rapoo Blue êm ái, độ nảy và độ nhạy tốt cho thao tác nhấn phím nhanh cực mượt và chuẩn xác.
+
+            Tuổi thọ Switch trên bàn phím Rapoo lên đến 60 triệu lượt nhấn phím, cho bạn an tâm sử dụng bàn phím liên tục suốt thời gian dài.
+
+            Switch Rapoo Blue bền bỉ - Bàn Phím Cơ Có Dây Gaming Rapoo V500alloy Đen
+
+            Bên cạnh đó, bàn phím còn trang bị thêm chế độ chống xung đột trên 26 phím chức năng, giúp cho các thao tác với tổ hợp phím nhanh và chính xác hơn mà không gặp tình trạng xung đột tín hiệu, đảm bảo cho tốc độ soạn thảo, thao tác ứng dụng hay chiến game của bạn.',
+            'p_color' => '#000',
+            'p_type' => 'Ban Phim',
+            'p_quantity' => 7,
+            'p_photo1' => 'avatars/co-co-day-gaming-rapoo-v500alloy-den-1.jpg',
+            'p_photo2' => 'avatars/co-co-day-gaming-rapoo-v500alloy-den-10.jpg',
+            'p_photo3' => 'avatars/co-co-day-gaming-rapoo-v500alloy-den-11.jpg',
+            'p_photo4' => 'avatars/co-co-day-gaming-rapoo-v500alloy-den-12.jpg',
+            'p_photo5' => 'avatars/co-co-day-gaming-rapoo-v500alloy-den-13.jpg',
+        ]);
     }
 }
 

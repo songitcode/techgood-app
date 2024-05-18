@@ -124,7 +124,7 @@ class AuthController extends Controller
         $products = DB::table('products')
             ->where('p_name', 'like', "%$keyword%")
             ->orWhere('p_type', 'like', "%$keyword%")
-            ->paginate(5);
+            ->paginate(10);
 
         if ($products->isEmpty()) {
             $message = "Không có sản phẩm nào cho từ khóa '$keyword'";

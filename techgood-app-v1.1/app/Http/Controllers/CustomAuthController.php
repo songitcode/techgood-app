@@ -29,7 +29,7 @@ class CustomAuthController extends Controller
         // $products = Products::all();
         // return view('auth.product_list', ['products' => $products]);
 
-        $products = Products::paginate(5); // Phân trang với mỗi trang có tối đa 10 sản phẩm
+        $products = Products::paginate(8); // Phân trang với mỗi trang có tối đa 10 sản phẩm
         return view('auth.product_list', compact('products'));
     }
 
