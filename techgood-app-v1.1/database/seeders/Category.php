@@ -20,7 +20,7 @@ class Category extends Seeder
             ['cate_name' => 'Man Hinh'],//4
             ['cate_name' => 'May Anh'],//5
             ['cate_name' => 'Tai Nghe'],//6
-            ['cate_name' => 'Dong Ho Thong'], //7Minh
+            ['cate_name' => 'Dong Ho'], //7
             ['cate_name' => 'Gaming Console'],//8
             ['cate_name' => 'Television'],//9
             ['cate_name' => 'Ban Phim'],//10
